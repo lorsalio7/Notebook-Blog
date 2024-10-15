@@ -380,12 +380,48 @@ template {
 }
 
 :root {
-  --sans-serif: "Inter", "Helvetica", "Verdana", sans-serif;
+  --sans-serif: "Noto Sans", "Helvetica", "Verdana", sans-serif;
   --serif: "Times New Roman", "Georgia", "Baskerville", serif;
   --color-white: rgb(255, 255, 255);
   /* #fff */
-  --color-black: rgb(0, 0, 0);
-  /* #000 */
+  --color-primary: rgb(0, 170, 161);
+  /* #00AAA1 */
+  --color-emperor: rgb(85, 85, 85);
+  /* #555 */
+  --color-boulder: rgb(119, 119, 119);
+  /* #777 */
+  --color-min-shaft: rgb(34, 34, 34);
+  /* #222 */
+  --color-dusty-gray: rgb(153, 153, 153);
+  /* #999 */
+  --color-dove-gray: rgb(102, 102, 102);
+  /* #666 */
+  --color-alto: rgb(217, 217, 217);
+  /* #d9d9d9 */
+  --color-silver: rgb(196, 196, 196);
+  /* #c4c4c4 */
+  --color-aqua-haze: rgb(242, 248, 247);
+  /* #f2f8f7 */
+  --color-cod-gray: rgb(28, 28, 28);
+  /* #1c1c1c */
+  --color-dark-charcoal: rgb(51, 51, 51);
+  /* #333 */
+  --color-skeptic: rgb(209, 231, 229);
+  /* #d1e7e5 */
+  --color-resene-black: rgb(30, 30, 30);
+  /* #1e1e1e */
+  --color-aqua-squeeze: rgb(223, 241, 240);
+  /* #dff1f0 */
+  --color-tiara: rgb(196, 209, 209);
+  /* #c4d1d1 */
+  --color-linen: rgb(253, 247, 244);
+  /* #fdf7f4 */
+  --color-shark: rgb(43, 44, 46);
+  /* #2b2c2e */
+  --color-aqua-spring: rgb(232, 243, 243);
+  /* #e8f3e8 */
+  --color-seashell: rgb(241, 241, 241);
+  /* #f1f1f1 */
 }
 
 /* @include list-reset; */
@@ -434,6 +470,54 @@ template {
 }
 
 /* @include font("$name", "$font-family", $weight, $style, $font-name-local, $font-name-local-alternate); */
+
+@font-face {
+  src: local("Noto Sans Regular"), local("Noto-Sans-Regular"), url("../fonts/Noto-Sans-Regular.woff2") format("woff2");
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: local("Noto Sans Light"), local("Noto-Sans-Light"), url("../fonts/Noto-Sans-Light.woff2") format("woff2");
+  font-family: "Noto Sans";
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: local("Noto Sans Italic"), local("Noto-Sans-Italic"), url("../fonts/Noto-Sans-Italic.woff2") format("woff2");
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  src: local("Noto Sans Bold"), local("Noto-Sans-Bold"), url("../fonts/Noto-Sans-Bold.woff2") format("woff2");
+  font-family: "Noto Sans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: local("Noto Sans Medium"), local("Noto-Sans-Medium"), url("../fonts/Noto-Sans-Medium.woff2") format("woff2");
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: local("Noto Sans SemiBold"), local("Noto-Sans-SemiBold"), url("../fonts/Noto-Sans-SemiBold.woff2") format("woff2");
+  font-family: "Noto Sans";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
 html {
   box-sizing: border-box;
