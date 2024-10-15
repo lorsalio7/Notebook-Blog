@@ -13,11 +13,11 @@
   <body class="page__body full-height">
     <div class="wrapper">
       <header class="site-header">
-        <div class="container">
-          <nav class="site-navigation">
+        <div class="container site-header__container">
+          <nav class="site-navigation site-header__main-navigation">
             <ul class="site-navigation__list">
               <li class="site-navigation__item dropdown">
-                <button class="dropdown__toggle" type="button">Homepages</button>
+                <button class="site-navigation__link dropdown__toggle" type="button">Homepages</button>
                 <ul class="dropdown__list">
                   <li class="dropdown__item"><a class="dropdown__link" href="#">Home 1</a></li>
                   <li class="dropdown__item"><a class="dropdown__link" href="#">Home 2</a></li>
@@ -27,7 +27,7 @@
               </li>
               <li class="site-navigation__item"><a class="site-navigation__link" href="#">About</a></li>
               <li class="site-navigation__item dropdown">
-                <button class="dropdown__toggle" type="button">Categories</button>
+                <button class="site-navigation__link dropdown__toggle" type="button">Categories</button>
                 <ul class="dropdown__list">
                   <li class="dropdown__item"><a class="dropdown__link" href="#">Lifestyle</a></li>
                   <li class="dropdown__item"><a class="dropdown__link" href="#">Travel</a></li>
@@ -37,7 +37,7 @@
                 </ul>
               </li>
               <li class="site-navigation__item dropdown">
-                <button class="dropdown__toggle" type="button">Pages</button>
+                <button class="site-navigation__link dropdown__toggle" type="button">Pages</button>
                 <ul class="dropdown__list">
                   <li class="dropdown__item"><a class="dropdown__link" href="#">Write Blog</a></li>
                   <li class="dropdown__item"><a class="dropdown__link" href="#">About Us</a></li>
@@ -51,21 +51,22 @@
                 </ul>
               </li>
             </ul>
-          </nav><a class="logo" href="#"><img class="logo__image" src="/img/logo.svg" alt="Logo Notebook"></a>
-          <ul class="user-navigation">
+          </nav><a class="logo site-header__logo" href="#"><img class="logo__image" src="/img/logo.svg" width="119" height="27" alt="Logo Notebook"></a>
+          <ul class="user-navigation site-header__user-navigation">
             <li class="user-navigation__item"><a class="user-navigation__link" href="#">
                 <svg class="user-navigation__icon" width="18" height="18" aria-hidden="false">
-                  <use xlink:href="img/sprite.svg#search-ic"></use>
+                  <use xlink:href="/img/sprite.svg#search-ic"></use>
                 </svg></a></li>
             <li class="user-navigation__item"><a class="user-navigation__link" href="#">
                 <svg class="user-navigation__icon" width="18" height="18" aria-hidden="false">
-                  <use xlink:href="img/sprite.svg#write-ic"></use>
+                  <use xlink:href="/img/sprite.svg#write-ic"></use>
                 </svg></a></li>
             <li class="user-navigation__item"><a class="user-navigation__link" href="#">Contact</a></li>
             <li class="user-navigation__item">
               <form class="language-form" action="#">
-                <div class="language-form__select">
-                  <select name="language" id="language">
+                <div class="language-form__wrapper">
+                  <label class="visually-hidden" for="language">Select language</label>
+                  <select class="language-form__select" name="language" id="language">
                     <option value="en">En</option>
                     <option value="es">Es</option>
                     <option value="de">De</option>
@@ -75,7 +76,14 @@
               </form>
             </li>
             <li class="user-navigation__item">
-              <button class="theme-button" type="button" aria-label="Change Color Theme"><span class="theme-button__slider"></span></button>
+              <button class="theme-button" type="button" aria-label="Change Color Theme">
+                <svg class="theme-button__icon theme-button__icon--day" width="14" height="14" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#day-ic"></use>
+                </svg>
+                <svg class="theme-button__icon theme-button__icon--night" width="14" height="14" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#night-ic"></use>
+                </svg><span class="theme-button__slider"></span>
+              </button>
             </li>
           </ul>
         </div>

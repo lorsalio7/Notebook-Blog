@@ -2,5 +2,23 @@
   padding: 30px 0;
   text-align: center;
   color: #fff;
-  background-color: #315b6b;
+  background-color: var(--color-aqua-spring);
+}
+
+.site-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header__main-navigation {
+  flex-basis: 33.95%;
+}
+
+.site-header__logo {
+  flex-basis: 9.26%;
+}
+
+.site-header__user-navigation {
+  flex-basis: 33.95%;
 }

@@ -1,9 +1,9 @@
 header.site-header
-  .container
-    nav.site-navigation
+  .container.site-header__container
+    nav.site-navigation.site-header__main-navigation
       ul.site-navigation__list
         li.site-navigation__item.dropdown
-          button(type="button").dropdown__toggle Homepages
+          button(type="button").site-navigation__link.dropdown__toggle Homepages
           ul.dropdown__list
             li.dropdown__item
               a(href="#").dropdown__link Home 1
@@ -16,7 +16,7 @@ header.site-header
         li.site-navigation__item
           a(href="#").site-navigation__link About
         li.site-navigation__item.dropdown
-          button(type="button").dropdown__toggle Categories
+          button(type="button").site-navigation__link.dropdown__toggle Categories
           ul.dropdown__list
             li.dropdown__item
               a(href="#").dropdown__link Lifestyle
@@ -29,7 +29,7 @@ header.site-header
             li.dropdown__item
               a(href="#").dropdown__link Technology
         li.site-navigation__item.dropdown
-          button(type="button").dropdown__toggle Pages
+          button(type="button").site-navigation__link.dropdown__toggle Pages
           ul.dropdown__list
             li.dropdown__item
               a(href="#").dropdown__link Write Blog
@@ -49,27 +49,32 @@ header.site-header
               a(href="#").dropdown__link Faq
             li.dropdown__item
               a(href="#").dropdown__link 404
-    a(href="#").logo
-      img(src="/img/logo.svg", alt="Logo Notebook").logo__image
-    ul.user-navigation
+    a(href="#").logo.site-header__logo
+      img(src="/img/logo.svg", width="119" height="27" alt="Logo Notebook").logo__image
+    ul.user-navigation.site-header__user-navigation
       li.user-navigation__item
         a(href="#").user-navigation__link
           svg(width="18" height="18" class="user-navigation__icon" aria-hidden="false")
-            use(xlink:href="img/sprite.svg#search-ic")
+            use(xlink:href="/img/sprite.svg#search-ic")
       li.user-navigation__item
         a(href="#").user-navigation__link
           svg(width="18" height="18" class="user-navigation__icon" aria-hidden="false")
-            use(xlink:href="img/sprite.svg#write-ic")
+            use(xlink:href="/img/sprite.svg#write-ic")
       li.user-navigation__item
         a(href="#").user-navigation__link Contact
       li.user-navigation__item
         form(action="#").language-form
-          .language-form__select
-            select(name="language" id="language")
+          .language-form__wrapper
+            label(for="language").visually-hidden Select language
+            select(name="language" id="language").language-form__select
               option(value="en") En
               option(value="es") Es
               option(value="de") De
               option(value="it") It
       li.user-navigation__item
         button(type="button" aria-label="Change Color Theme").theme-button
+          svg(width="14" height="14" class="theme-button__icon theme-button__icon--day" aria-hidden="true")
+            use(xlink:href="img/sprite.svg#day-ic")
+          svg(width="14" height="14" class="theme-button__icon theme-button__icon--night" aria-hidden="true")
+            use(xlink:href="img/sprite.svg#night-ic")
           span.theme-button__slider

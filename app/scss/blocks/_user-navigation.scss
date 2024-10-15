@@ -1,0 +1,26 @@
+.user-navigation {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-navigation__item:not(:last-of-type) {
+  margin-right: 40px;
+}
+
+.user-navigation__link {
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--color-dark-charcoal);
+
+  @include hover {
+    text-decoration: underline;
+
+    > .user-navigation__icon {
+      fill: var(--color-primary);
+    }
+  }
+}

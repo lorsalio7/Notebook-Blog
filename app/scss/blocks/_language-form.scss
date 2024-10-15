@@ -1,0 +1,31 @@
+.language-form__wrapper {
+  position: relative;
+}
+
+.language-form__wrapper::after {
+  content: "";
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background-image: url("../img/dropdown-arrow-ic.svg");
+  background-position: center;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.language-form__select {
+  appearance: none;
+  border: none;
+  padding: 2px 16px 2px 4px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--color-min-shaft);
+  background: none;
+  cursor: pointer;
+}
