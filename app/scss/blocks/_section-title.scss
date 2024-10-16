@@ -1,0 +1,15 @@
+.section-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 140%;
+  text-transform: capitalize;
+  color: var(--color-min-shaft);
+}
+
+.section-title__marker {
+  margin-right: 8px;
+  padding: 0 2px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}

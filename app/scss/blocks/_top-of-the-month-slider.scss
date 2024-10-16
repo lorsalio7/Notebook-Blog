@@ -1,0 +1,18 @@
+.top-of-the-month-slider__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-of-the-month-slider__slide {
+  display: flex;
+  justify-content: space-between;
+}
+
+// .top-of-the-month-slider__post:first-of-type {
+//   margin-right: 30px;
+// }
+
+.top-of-the-month-slider__post {
+  flex: 0 1 calc(50% - 15px);
+}
