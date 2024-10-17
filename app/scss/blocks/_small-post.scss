@@ -25,11 +25,19 @@
   order: 2;
   margin-top: 0;
   margin-bottom: 24px;
+  min-height: 76px;
   font-weight: 600;
   font-size: 27px;
   line-height: 140%;
   text-transform: capitalize;
   color: var(--color-min-shaft);
+}
+
+.small-post--no-image .small-post__title {
+  margin-bottom: 16px;
+  min-height: auto;
+  font-size: 17px;
+  line-height: 150%;
 }
 
 .small-post__link {

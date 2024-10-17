@@ -1,0 +1,29 @@
+.popular-posts-slider__post:first-of-type {
+  margin-bottom: 48px;
+}
+
+.popular-posts-slider .splide__pagination {
+  position: static;
+  margin-top: 40px;
+}
+
+.popular-posts-slider .splide__pagination li {
+  line-height: 0;
+}
+
+.popular-posts-slider .splide__pagination__page {
+  margin: 0 4px;
+  border-radius: 4px;
+  width: 10px;
+  height: 6px;
+  background-color: var(--color-tiara);
+  transition: width 0.4s ease;
+}
+
+.popular-posts-slider .splide__pagination__page.is-active {
+  border-radius: 4px;
+  width: 25px;
+  height: 6px;
+  background-color: var(--color-primary);
+  transform: none;
+}

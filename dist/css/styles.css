@@ -758,6 +758,19 @@ body {
   background-color: var(--color-aqua-haze);
 }
 
+.top-posts__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-posts__section:first-of-type {
+  max-width: calc(70.22% - 25px);
+}
+
+.top-posts__section:last-of-type {
+  max-width: calc(29.78% - 25px);
+}
+
 .section-title {
   margin: 0;
   font-weight: 600;
@@ -778,6 +791,10 @@ body {
   margin-bottom: 55px;
 }
 
+.top-of-the-month__slider {
+  padding-right: 53px;
+}
+
 .top-of-the-month-slider__list {
   list-style-type: none;
   margin: 0;
@@ -791,6 +808,26 @@ body {
 
 .top-of-the-month-slider__post {
   flex: 0 1 calc(50% - 15px);
+}
+
+.top-of-the-month-slider__progress-bar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-silver);
+}
+
+.top-of-the-month-slider__runner {
+  border-radius: 3px;
+  width: 3px;
+  height: 0;
+  background-color: var(--color-primary);
+  transition: height 0.4s ease;
 }
 
 .small-post {
@@ -815,11 +852,19 @@ body {
   order: 2;
   margin-top: 0;
   margin-bottom: 24px;
+  min-height: 76px;
   font-weight: 600;
   font-size: 27px;
   line-height: 140%;
   text-transform: capitalize;
   color: var(--color-min-shaft);
+}
+
+.small-post--no-image .small-post__title {
+  margin-bottom: 16px;
+  min-height: auto;
+  font-size: 17px;
+  line-height: 150%;
 }
 
 .small-post__link {
@@ -927,6 +972,40 @@ body {
   font-size: 15px;
   line-height: 150%;
   color: var(--color-emperor);
+}
+
+.popular-posts__title {
+  margin-bottom: 55px;
+}
+
+.popular-posts-slider__post:first-of-type {
+  margin-bottom: 48px;
+}
+
+.popular-posts-slider .splide__pagination {
+  position: static;
+  margin-top: 40px;
+}
+
+.popular-posts-slider .splide__pagination li {
+  line-height: 0;
+}
+
+.popular-posts-slider .splide__pagination__page {
+  margin: 0 4px;
+  border-radius: 4px;
+  width: 10px;
+  height: 6px;
+  background-color: var(--color-tiara);
+  transition: width 0.4s ease;
+}
+
+.popular-posts-slider .splide__pagination__page.is-active {
+  border-radius: 4px;
+  width: 25px;
+  height: 6px;
+  background-color: var(--color-primary);
+  transform: none;
 }
 
 .site-footer {
