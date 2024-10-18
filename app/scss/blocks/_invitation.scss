@@ -1,0 +1,19 @@
+.invitation {
+  border-radius: 10px;
+  padding: 56px 20px;
+  text-align: center;
+  background-color: var(--color-aqua-haze);
+}
+
+.invitation__text {
+  margin-top: 0;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 140%;
+  text-transform: capitalize;
+  color: var(--color-min-shaft);
+}
+
+.invitation__button {
+  display: inline-block;
+}

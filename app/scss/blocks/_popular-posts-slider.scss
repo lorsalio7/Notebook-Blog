@@ -17,7 +17,7 @@
   width: 10px;
   height: 6px;
   background-color: var(--color-tiara);
-  transition: width 0.4s ease;
+  transition: width 0.4s ease, background-color 0.4s ease;
 }
 
 .popular-posts-slider .splide__pagination__page.is-active {

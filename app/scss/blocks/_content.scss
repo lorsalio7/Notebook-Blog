@@ -1,0 +1,20 @@
+.content__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__title {
+  margin-bottom: 55px;
+}
+
+.content__recent-posts {
+  flex: 0 1 calc(69.14% - 40px);
+}
+
+.content__main-sidebar {
+  flex: 0 1 calc(30.86% - 40px);
+}
+
+.content__invitation {
+  margin-bottom: 56px;
+}
