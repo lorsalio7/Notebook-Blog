@@ -13,6 +13,19 @@
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
+.button--secondary {
+  border: 1px solid var(--color-white);
+  padding: 12px 26px;
+  color: var(--color-primary);
+  background-color: var(--color-white);
+
+  @include hover {
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    background-color: transparent;
+  }
+}
+
 .button--big {
   font-size: 17px;
 }

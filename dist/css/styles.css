@@ -1055,6 +1055,10 @@ body {
   margin-bottom: 56px;
 }
 
+.content__top-authors {
+  margin-bottom: 56px;
+}
+
 .recent-posts__list {
   list-style-type: none;
   margin: 0 0 56px;
@@ -1098,6 +1102,13 @@ body {
   color: var(--color-white);
   background-color: var(--color-primary);
   transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.button--secondary {
+  border: 1px solid var(--color-white);
+  padding: 12px 26px;
+  color: var(--color-primary);
+  background-color: var(--color-white);
 }
 
 .button--big {
@@ -1217,6 +1228,43 @@ body {
   fill: var(--color-dusty-gray);
 }
 
+.sidebar-ad {
+  position: relative;
+  padding: 55px 20px;
+  background-color: var(--color-primary);
+}
+
+.sidebar-ad__badge {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: var(--color-white);
+}
+
+.sidebar-ad__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  max-width: 222px;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 140%;
+  text-transform: capitalize;
+  color: var(--color-white);
+}
+
+.sidebar-ad__description {
+  margin-top: 0;
+  margin-bottom: 24px;
+  max-width: 284px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--color-white);
+}
+
 .site-footer {
   padding: 30px 0;
   text-align: center;
@@ -1252,6 +1300,12 @@ body {
 
   .small-post__writer-link:hover > .small-post__author-name {
     text-decoration: underline;
+  }
+
+  .button--secondary:hover {
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    background-color: transparent;
   }
 
   .button--outline:hover {
