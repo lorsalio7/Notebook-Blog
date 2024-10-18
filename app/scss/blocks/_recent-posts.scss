@@ -3,3 +3,7 @@
   margin: 0 0 56px;
   padding: 0;
 }
+
+.recent-posts__item:not(:last-of-type) {
+  margin-bottom: 48px;
+}

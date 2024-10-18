@@ -1039,6 +1039,10 @@ body {
   margin-bottom: 55px;
 }
 
+.content__main-sidebar .content__title {
+  margin-bottom: 40px;
+}
+
 .content__recent-posts {
   flex: 0 1 calc(69.14% - 40px);
 }
@@ -1055,6 +1059,10 @@ body {
   list-style-type: none;
   margin: 0 0 56px;
   padding: 0;
+}
+
+.recent-posts__item:not(:last-of-type) {
+  margin-bottom: 48px;
 }
 
 .invitation {
@@ -1117,6 +1125,98 @@ body {
   margin-right: 8px;
 }
 
+.top-authors__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-authors__item:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+
+.small-author-card {
+  display: flex;
+  align-items: center;
+}
+
+.small-author-card__image {
+  display: block;
+  margin-right: 24px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.small-author-card__name {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 100%;
+  text-transform: capitalize;
+  color: var(--color-min-shaft);
+}
+
+.small-author-card__author-link {
+  text-decoration: none;
+  color: var(--color-min-shaft);
+}
+
+.small-author-card__about {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 150%;
+  color: var(--color-dove-gray);
+}
+
+.small-author-card__link {
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--color-dark-charcoal);
+}
+
+.socials {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.socials__item:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-boulder);
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.socials--small .socials__link {
+  border: 1px solid var(--color-silver);
+  width: 20px;
+  height: 20px;
+}
+
+.socials__icon {
+  fill: var(--color-boulder);
+  transition: fill 0.3s ease;
+}
+
+.socials--small .socials__icon {
+  fill: var(--color-dusty-gray);
+}
+
 .site-footer {
   padding: 30px 0;
   text-align: center;
@@ -1160,6 +1260,24 @@ body {
   }
 
   .button--outline:hover > .button__icon {
+    fill: var(--color-white);
+  }
+
+  .small-author-card__author-link:hover {
+    text-decoration: underline;
+  }
+
+  .small-author-card__link:hover {
+    text-decoration: underline;
+    color: var(--color-primary);
+  }
+
+  .socials__link:hover {
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-primary);
+  }
+
+  .socials__link:hover > .socials__icon {
     fill: var(--color-white);
   }
 }
