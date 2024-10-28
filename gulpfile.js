@@ -185,7 +185,7 @@ function clean() {
   )
 }
 
-let build = gulp.series(clean, gulp.parallel(gulpPug, css, avifWebp, images, js, cssLibs, jsLibs));
+let build = gulp.series(clean, gulp.parallel(gulpPug, css, /* avifWebp, */ images, js, cssLibs, jsLibs));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.pug = gulpPug;

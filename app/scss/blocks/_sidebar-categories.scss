@@ -1,0 +1,38 @@
+.sidebar-categories__title {
+  margin-bottom: 40px;
+}
+
+.sidebar-categories__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-categories__item:not(:last-of-type) {
+  margin-bottom: 13px;
+  border-bottom: 1px dashed var(--color-skeptic);
+}
+
+.sidebar-categories__link {
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 0 0 10px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--color-cod-gray);
+  transition: color 0.3s ease;
+
+  @include hover {
+    color: var(--color-primary);
+  }
+}
+
+.sidebar-categories__count {
+  align-self: flex-end;
+  margin-left: 16px;
+  line-height: 1;
+}
