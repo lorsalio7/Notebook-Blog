@@ -1351,6 +1351,65 @@ body {
   color: var(--color-primary);
 }
 
+.instafeed__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: -10px;
+  padding: 0;
+}
+
+.instafeed__item {
+  flex-basis: calc((100% - 20px) / 3);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.instafeed__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.instafeed__link {
+  position: relative;
+  display: block;
+}
+
+.instafeed__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--color-shark);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.instafeed__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url("../img/insta-ic.svg");
+  background-position: center;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.instafeed__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .site-footer {
   padding: 30px 0;
   text-align: center;
@@ -1423,5 +1482,13 @@ body {
 
   .sidebar-categories__link:hover {
     color: var(--color-primary);
+  }
+
+  .instafeed__link:hover::before {
+    opacity: 0.3;
+  }
+
+  .instafeed__link:hover::after {
+    opacity: 1;
   }
 }
