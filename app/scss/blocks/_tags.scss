@@ -1,0 +1,14 @@
+.tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  margin-right: -12px;
+  margin-bottom: -12px;
+  padding: 0;
+}
+
+.tags__item {
+  margin-right: 12px;
+  margin-bottom: 12px;
+}

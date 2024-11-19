@@ -57,10 +57,27 @@
                   time(datetime="2022-12-02").small-post__date 02 december 2022
                   p.small-post__reading-time 3 min. to read
                 p.small-post__post-text Did you come here for something in particular or just general Riker-bashing? And blowing into
+      .pagination
+        a(title="Previous page").pagination__control.pagination__control--prev
+          svg(width="11" height="8" class="pagination__icon" aria-hidden="true")
+            use(xlink:href="img/sprite.svg#pagination-arrow-left")
+          span Prev
+        ul.pagination__list
+          li.pagination__item
+            a(title="Page 1").pagination__link 1
+          li.pagination__item
+            a(href="#" title="Page 2").pagination__link 2
+          li.pagination__item
+            a(href="#" title="Page 3").pagination__link 3
+        a(href="#" title="Next page").pagination__control.pagination__control--next
+          svg(width="11" height="8" class="pagination__icon" aria-hidden="true")
+            use(xlink:href="img/sprite.svg#pagination-arrow-right")
+          span Next
     aside.content__main-sidebar.main-sidebar
       include _sidebar-top-authors.pug
       include _sidebar-ad.pug
       include _sidebar-categories.pug
       include _sidebar-statistics.pug
       include _sidebar-instafeed.pug
+      include _sidebar-tags.pug
 
