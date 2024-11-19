@@ -1,3 +1,7 @@
+.content {
+  padding-top: 80px;
+}
+
 .content__container {
   display: flex;
   justify-content: space-between;
@@ -19,14 +23,6 @@
   flex: 0 1 calc(30.86% - 40px);
 }
 
-.content__invitation {
-  margin-bottom: 56px;
-}
-
-.content__top-authors {
-  margin-bottom: 56px;
-}
-
-.content__sidebar-ad {
-  margin-bottom: 58px;
+.content__sidebar-item {
+  margin-bottom: 80px;
 }
