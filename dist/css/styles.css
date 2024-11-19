@@ -755,6 +755,7 @@ body {
 
 .top-posts {
   padding-top: 80px;
+  padding-bottom: 90px;
   background-color: var(--color-aqua-haze);
 }
 
@@ -764,7 +765,7 @@ body {
 }
 
 .top-posts__section:first-of-type {
-  max-width: calc(70.22% - 25px);
+  flex-basis: calc(70.22% - 25px);
 }
 
 .top-posts__section:last-of-type {
@@ -791,43 +792,51 @@ body {
   margin-bottom: 55px;
 }
 
-.top-of-the-month__slider {
-  padding-right: 53px;
+.top-of-the-month__track {
+  padding-right: 59px;
+  max-height: 464px;
 }
 
-.top-of-the-month-slider__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.top-of-the-month-slider__slide {
+.top-of-the-month__track .simplebar-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.top-of-the-month-slider__post {
-  flex: 0 1 calc(50% - 15px);
+.top-of-the-month__post {
+  flex-basis: calc(50% - 20px);
+  margin-bottom: 40px;
 }
 
-.top-of-the-month-slider__progress-bar {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 1px;
-  height: 100%;
+.simplebar-content::after,
+.simplebar-content::before {
+  display: none;
+}
+
+.simplebar-track {
+  overflow: visible;
   background-color: var(--color-silver);
 }
 
-.top-of-the-month-slider__runner {
-  border-radius: 3px;
-  width: 3px;
-  height: 0;
+.simplebar-track.simplebar-vertical {
+  width: 1px;
+}
+
+.simplebar-scrollbar::before {
+  left: -1px;
+  right: -1px;
+  top: 0;
+  bottom: 0;
   background-color: var(--color-primary);
-  transition: height 0.4s ease;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+  top: 0;
+  bottom: 0;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
 }
 
 .small-post {

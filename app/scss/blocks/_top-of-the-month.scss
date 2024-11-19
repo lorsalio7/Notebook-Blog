@@ -2,6 +2,18 @@
   margin-bottom: 55px;
 }
 
-.top-of-the-month__slider {
-  padding-right: 53px;
+.top-of-the-month__track {
+  padding-right: 59px;
+  max-height: 464px;
+}
+
+.top-of-the-month__track .simplebar-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.top-of-the-month__post {
+  flex-basis: calc(50% - 20px);
+  margin-bottom: 40px;
 }

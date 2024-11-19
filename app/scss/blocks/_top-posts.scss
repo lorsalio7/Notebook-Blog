@@ -1,5 +1,6 @@
 .top-posts {
   padding-top: 80px;
+  padding-bottom: 90px;
   background-color: var(--color-aqua-haze);
 }
 
@@ -9,7 +10,7 @@
 }
 
 .top-posts__section:first-of-type {
-  max-width: calc(70.22% - 25px);
+  flex-basis: calc(70.22% - 25px);
 }
 
 .top-posts__section:last-of-type {
