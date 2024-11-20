@@ -1,1 +1,61 @@
-footer.site-footer This is site footer
+footer.site-footer
+  .container
+    .site-footer__top
+      .site-footer__content
+        a(href="#").logo.site-footer__logo
+          img(src="/img/logo.svg", width="119" height="27" alt="Logo Notebook").logo__image
+        p.site-footer__description Did you come here for something in particular or just general Riker
+      .site-footer__navigation.footer-navigation
+        .footer-navigation__column
+          h2.footer-navigation__title Blogs
+          ul.footer-navigation__list
+            li.footer-navigation__item
+              a(href="#").footer-navigation__link Travel
+            li.footer-navigation__item
+              a(href="#").footer-navigation__link Technology
+            li.footer-navigation__item
+              a(href="#").footer-navigation__link Lifestyle
+            li.footer-navigation__item
+              a(href="#").footer-navigation__link Fashion
+            li.footer-navigation__item
+              a(href="#").footer-navigation__link Business
+        .footer-navigation__column
+          h2.footer-navigation__title Quick links
+          ul.footer-navigation__list
+            li.footer-navigation__item
+              a(href="#").footer-navigation__link FAQ
+            li.footer-navigation__item
+              a(href="#").footer-navigation__link Terms & conditions
+            li.footer-navigation__item
+              a(href="#").footer-navigation__link Support
+            li.footer-navigation__item
+              a(href="#").footer-navigation__link Privacy policy
+        .footer-navigation__column
+          .footer-navigation__subscription
+            h2.footer-navigation__title Subscribe for newsletter
+            form(action="#").footer-navigation__form.subscription-form
+              label(for="subscription-input").visually-hidden Enter your email
+              .subscription-form__row
+                input(type="email" id="subscription-input" placeholder="Your Email").input.subscription-form__input
+                button(type="submit").button.subscription-form__button Subscribe
+          .footer-navigation__socials
+            h2.footer-navigation__title Follow on:
+            ul.socials
+              li.socials__item
+                a(href="#").socials__link
+                  svg(width="12" height="10" class="socials__icon" aria-hidden="true")
+                    use(xlink:href="img/sprite.svg#twitter-ic")
+              li.socials__item
+                a(href="#").socials__link
+                  svg(width="7" height="14" class="socials__icon" aria-hidden="true")
+                    use(xlink:href="img/sprite.svg#facebook-ic")
+              li.socials__item
+                a(href="#").socials__link
+                  svg(width="14" height="14" class="socials__icon" aria-hidden="true")
+                    use(xlink:href="img/sprite.svg#pinterest-ic")
+              li.socials__item
+                a(href="#").socials__link
+                  svg(width="14" height="14" class="socials__icon" aria-hidden="true")
+                    use(xlink:href="img/sprite.svg#instagram-ic")
+    .site-footer__bottom
+      p.site-footer__copyright Designed By Themefisher & Developed By Gethugothemes

@@ -6,6 +6,10 @@
 }
 
 .socials__item:not(:last-of-type) {
+  margin-right: 18px;
+}
+
+.socials--small .socials__item:not(:last-of-type) {
   margin-right: 10px;
 }
 

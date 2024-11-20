@@ -1,0 +1,29 @@
+.subscription-form__row {
+  display: flex;
+}
+
+.subscription-form__input {
+  display: flex;
+  outline: none;
+  border: 1px solid var(--color-aqua-squeeze);
+  border-radius: 6px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 100%;
+  color: var(--color-boulder);
+  background-color: var(--color-aqua-squeeze);
+
+  &:focus {
+    border: 1px solid var(--color-primary);
+  }
+}
+
+.subscription-form__button {
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-right: 42px;
+  padding-left: 42px;
+  cursor: pointer;
+}
