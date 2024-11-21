@@ -3,7 +3,8 @@ footer.site-footer
     .site-footer__top
       .site-footer__content
         a(href="#").logo.site-footer__logo
-          img(src="/img/logo.svg", width="119" height="27" alt="Logo Notebook").logo__image
+          svg(width="120" height="28" class="logo__image" aria-hidden="false")
+            use(xlink:href="img/sprite.svg#logo")
         p.site-footer__description Did you come here for something in particular or just general Riker
       .site-footer__navigation.footer-navigation
         .footer-navigation__column

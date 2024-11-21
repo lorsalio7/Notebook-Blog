@@ -13,6 +13,10 @@
   color: var(--color-boulder);
   background-color: var(--color-aqua-squeeze);
 
+  &::placeholder {
+    color: var(--color-boulder);
+  }
+
   &:focus {
     border: 1px solid var(--color-primary);
   }

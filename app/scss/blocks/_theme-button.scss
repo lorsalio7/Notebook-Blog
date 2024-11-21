@@ -29,6 +29,14 @@
   }
 }
 
+.dark-theme .theme-button__icon--day {
+  fill: var(--color-min-shaft);
+}
+
+.dark-theme .theme-button__icon--night {
+  fill: var(--color-primary);
+}
+
 .theme-button__slider {
   position: absolute;
   right: 0;

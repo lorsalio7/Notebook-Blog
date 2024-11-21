@@ -50,7 +50,8 @@ header.site-header
             li.dropdown__item
               a(href="#").dropdown__link 404
     a(href="#").logo.site-header__logo
-      img(src="/img/logo.svg", width="119" height="27" alt="Logo Notebook").logo__image
+      svg(width="120" height="28" class="logo__image" aria-hidden="false")
+        use(xlink:href="img/sprite.svg#logo")
     ul.user-navigation.site-header__user-navigation
       li.user-navigation__item
         a(href="#").user-navigation__link
