@@ -7,6 +7,10 @@
   max-height: 464px;
 }
 
+.top-of-the-month__slider--column .top-of-the-month__track {
+  max-height: 670px;
+}
+
 .top-of-the-month__track--column-no-image {
   max-height: 422px;
 }
@@ -17,9 +21,21 @@
   justify-content: space-between;
 }
 
+.top-of-the-month__slider--column .simplebar-content {
+  flex-direction: column;
+}
+
 .top-of-the-month__post {
   flex-basis: calc(50% - 15px);
   margin-bottom: 40px;
+}
+
+.top-of-the-month__slider--column .top-of-the-month__post:last-of-type {
+  margin-bottom: 0;
+}
+
+.top-of-the-month__slider--column .top-of-the-month__post:not(:last-of-type) {
+  margin-bottom: 32px;
 }
 
 .top-of-the-month__post.small-post--medium-no-image {

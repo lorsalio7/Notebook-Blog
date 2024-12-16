@@ -1,0 +1,22 @@
+extends ../layout/main-template.pug
+
+block vars
+  - var pageTitle = "Notebook - Travel Blog";
+  - var pageDescription = "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur";
+  - var htmlClass = "page";
+  - var additionalClasses = " full-height";
+  - var bodyClass = "page__body";
+  - var indexPageVariant = 3;
+
+prepend styles
+  link(rel="stylesheet", href="/libs/css/splide.min.css")
+  link(rel="stylesheet", href="/libs/css/simplebar.min.css")
+
+block content
+  include ../sections/_header.pug
+  include ../sections/_index-main.pug
+  include ../sections/_footer.pug
+
+prepend scripts
+  script(src="/libs/js/splide.min.js" defer)
+  script(src="/libs/js/simplebar.min.js" defer)

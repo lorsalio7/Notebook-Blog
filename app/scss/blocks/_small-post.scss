@@ -14,6 +14,14 @@
   background-color: var(--color-white);
 }
 
+.small-post--background {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  border-radius: 7px;
+  padding: 24px;
+  background-color: var(--color-white);
+}
+
 .small-post__badge {
   align-self: flex-start;
   order: 1;
@@ -82,6 +90,10 @@
   flex-direction: column;
 }
 
+.small-post--background .small-post__info {
+  flex-basis: 49.36%;
+}
+
 .small-post__image {
   display: block;
   order: 3;
@@ -97,6 +109,12 @@
   margin-bottom: 0;
   height: 180px;
   max-width: 266px;
+}
+
+.small-post--background .small-post__image {
+  margin-bottom: 0;
+  width: calc(50.64% - 24px);
+  height: 271px;
 }
 
 .small-post__description {

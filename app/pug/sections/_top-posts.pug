@@ -5,8 +5,8 @@ section.top-posts
       h3.top-of-the-month__title.section-title
         span.section-title__marker Featured
         | This Month
-      .top-of-the-month__slider
-        if indexPageVariant === 1
+      if indexPageVariant === 1
+        .top-of-the-month__slider
           div(data-simplebar data-simplebar-auto-hide="false" class="top-of-the-month__track")
             each item in pugData.top_of_the_month
               article.top-of-the-month__post.small-post
@@ -22,7 +22,8 @@ section.top-posts
                     time(datetime= item.post_datetime).small-post__date= item.post_date
                     p.small-post__reading-time= item.reading_time
                   p.small-post__post-text= item.post_text
-        else if indexPageVariant === 2
+      else if indexPageVariant === 2
+        .top-of-the-month__slider
           div(data-simplebar data-simplebar-auto-hide="false" class="top-of-the-month__track top-of-the-month__track--column-no-image")
             each item in pugData.top_of_the_month
               article.top-of-the-month__post.small-post.small-post--medium-no-image
@@ -37,6 +38,24 @@ section.top-posts
                     time(datetime= item.post_datetime).small-post__date= item.post_date
                     p.small-post__reading-time= item.reading_time
                   p.small-post__post-text= item.post_text
+      else if indexPageVariant === 3
+        .top-of-the-month__slider.top-of-the-month__slider--column
+          div(data-simplebar data-simplebar-auto-hide="false" class="top-of-the-month__track")
+            each item in pugData.top_of_the_month
+              article.top-of-the-month__post.small-post.small-post--background
+                img(src= item.image width="401" height="229", alt= item.title).small-post__image
+                .small-post__info
+                  h4.small-post__title
+                    a(href= item.link).small-post__link= item.title
+                  a(href= item.categorie_url).small-post__badge= item.categorie
+                  .small-post__description
+                    .small-post__meta
+                      a(href= item.author_link).small-post__writer-link
+                        img(src= item.author_image, width="18" height="18" alt="Author Post - " + item.author_name).small-post__photo-author
+                        p.small-post__author-name= item.author_name
+                      time(datetime= item.post_datetime).small-post__date= item.post_date
+                      p.small-post__reading-time= item.reading_time
+                    p.small-post__post-text= item.post_text
     section.top-posts__section.popular-posts
       h3.popular-posts__title.section-title
         span.section-title__marker Popular
