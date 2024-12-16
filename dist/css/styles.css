@@ -1556,6 +1556,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 24px;
 }
 
 .pagination__control {
