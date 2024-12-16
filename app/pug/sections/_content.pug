@@ -50,12 +50,7 @@
                   time(datetime="2022-12-02").small-post__date 02 december 2022
                   p.small-post__reading-time 3 min. to read
                 p.small-post__post-text Did you come here for something in particular or just general Riker-bashing? And blowing into
-      .content__invitation.invitation
-        p.invitation__text Share your knowledge with our readers
-        a(href="#").invitation__button.button.button--big.button--outline
-          svg(width="16" height="16" class="button__icon button__icon--left" aria-hidden="true")
-            use(xlink:href="img/sprite.svg#write-ic")
-          | Write on notebook
+      include _invitation.pug
       ul.recent-posts__list
         li.recent-posts__item
           article.small-post.small-post--medium
