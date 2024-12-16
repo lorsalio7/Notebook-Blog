@@ -8,8 +8,9 @@
 }
 
 .section-title__marker {
-  margin-right: 8px;
-  padding: 2px;
+  display: inline-block;
+  margin-right: 5px;
+  padding: 2px 1px;
   color: var(--color-white);
   background-color: var(--color-primary);
 }

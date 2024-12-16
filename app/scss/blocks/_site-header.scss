@@ -1,8 +1,9 @@
 .site-header {
-  padding: 30px 0;
+  padding: 24px 0 19px;
   text-align: center;
   color: #fff;
   background-color: var(--color-aqua-spring);
+  transition: background-color 0.3s ease;
 }
 
 .site-header__container {

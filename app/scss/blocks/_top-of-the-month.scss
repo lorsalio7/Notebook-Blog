@@ -1,10 +1,14 @@
 .top-of-the-month__title {
-  margin-bottom: 55px;
+  margin-bottom: 53px;
 }
 
 .top-of-the-month__track {
-  padding-right: 59px;
+  padding-right: 53px;
   max-height: 464px;
+}
+
+.top-of-the-month__track--column-no-image {
+  max-height: 422px;
 }
 
 .top-of-the-month__track .simplebar-content {
@@ -14,6 +18,11 @@
 }
 
 .top-of-the-month__post {
-  flex-basis: calc(50% - 20px);
+  flex-basis: calc(50% - 15px);
   margin-bottom: 40px;
+}
+
+.top-of-the-month__post.small-post--medium-no-image {
+  flex-basis: 100%;
+  margin-bottom: 48px;
 }
