@@ -4,5 +4,6 @@ if(popularPostsSlider) {
   popularPostsSlider = new Splide(popularPostsSlider, {
     arrows: false,
     gap: 30,
+    focusableNodes: "a, button"
   }).mount();
 }

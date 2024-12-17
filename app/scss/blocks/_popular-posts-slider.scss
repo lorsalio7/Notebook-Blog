@@ -1,14 +1,22 @@
-.popular-posts-slider__post:first-of-type {
+.popular-posts-slider__post--tiny-no-image:first-of-type {
   margin-bottom: 48px;
 }
 
-.popular-posts-slider__post.small-post--tiny-background:first-of-type {
+.popular-posts-slider__post--tiny-background:first-of-type {
   margin-bottom: 28px;
+}
+
+.popular-posts-slider__post--no-description:not(:last-of-type) {
+  margin-bottom: 40px;
 }
 
 .popular-posts-slider .splide__pagination {
   position: static;
   margin-top: 40px;
+}
+
+.popular-posts-slider--spacious .splide__pagination {
+  margin-top: 56px;
 }
 
 .popular-posts-slider .splide__pagination li {
