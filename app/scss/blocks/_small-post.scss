@@ -27,6 +27,10 @@
   justify-content: space-between;
 }
 
+.small-post--narrow {
+  flex-direction: column-reverse;
+}
+
 .small-post__badge {
   align-self: flex-start;
   order: 1;
@@ -85,6 +89,10 @@
   margin-bottom: 16px;
   min-height: auto;
   font-size: 17px;
+}
+
+.small-post--narrow .small-post__title {
+  margin-bottom: 16px;
 }
 
 .small-post__link {
