@@ -5,9 +5,26 @@
         span.section-title__marker Recently
         | Posted
       if indexPageVariant === 1
-        ul.recent-posts__list
+        .recent-posts__list
           each item in pugData.recent_posts.slice(0, 3)
-            li.recent-posts__item
+            .recent-posts__item
+              article.small-post.small-post--medium
+                img(src= item.image width="401" height="229", alt= item.title).small-post__image
+                .small-post__info
+                  h4.small-post__title
+                    a(href= item.link).small-post__link= item.title
+                  a(href= item.categorie_url).small-post__badge= item.categorie
+                  .small-post__description
+                    .small-post__meta
+                      a(href= item.author_link).small-post__writer-link
+                        img(src= item.author_image, width="18" height="18" alt="Author Post - " + item.author_name).small-post__photo-author
+                        p.small-post__author-name= item.author_name
+                      time(datetime= item.post_datetime).small-post__date= item.post_date
+                      p.small-post__reading-time= item.reading_time
+                    p.small-post__post-text= item.post_text
+          include _invitation.pug
+          each item in pugData.recent_posts.slice(3)
+            .recent-posts__item
               article.small-post.small-post--medium
                 img(src= item.image width="401" height="229", alt= item.title).small-post__image
                 .small-post__info
@@ -23,9 +40,25 @@
                       p.small-post__reading-time= item.reading_time
                     p.small-post__post-text= item.post_text
       if indexPageVariant === 2
-        ul.recent-posts__list
+        .recent-posts__list
           each item in pugData.recent_posts.slice(0, 2)
-            li.recent-posts__item
+            .recent-posts__item
+              article.small-post.small-post--medium-no-image
+                .small-post__info
+                  h4.small-post__title
+                    a(href= item.link).small-post__link= item.title
+                  a(href= item.categorie_url).small-post__badge= item.categorie
+                  .small-post__description
+                    .small-post__meta
+                      a(href= item.author_link).small-post__writer-link
+                        img(src= item.author_image, width="18" height="18" alt="Author Post - " + item.author_name).small-post__photo-author
+                        p.small-post__author-name= item.author_name
+                      time(datetime= item.post_datetime).small-post__date= item.post_date
+                      p.small-post__reading-time= item.reading_time
+                    p.small-post__post-text= item.post_text
+          include _invitation.pug
+          each item in pugData.recent_posts.slice(2)
+            .recent-posts__item
               article.small-post.small-post--medium-no-image
                 .small-post__info
                   h4.small-post__title
@@ -40,11 +73,12 @@
                       p.small-post__reading-time= item.reading_time
                     p.small-post__post-text= item.post_text
       if indexPageVariant === 4
-        ul.recent-posts__list
+        .recent-posts__list
           each item in pugData.recent_posts.slice(0,1)
-            li.recent-posts__item
+            .recent-posts__item
               article.small-post.small-post--decor
-                img(src= item.image width="401" height="229", alt= item.title).small-post__image
+                .small-post__image-wrapper
+                  img(src= item.image width="401" height="229", alt= item.title).small-post__image
                 .small-post__info
                   h4.small-post__title
                     a(href= item.link).small-post__link= item.title
@@ -57,14 +91,12 @@
                       time(datetime= item.post_datetime).small-post__date= item.post_date
                       p.small-post__reading-time= item.reading_time
                     p.small-post__post-text= item.post_text
-      if indexPageVariant != 3
-        include _invitation.pug
-      if indexPageVariant === 1
-        ul.recent-posts__list
-          each item in pugData.recent_posts.slice(3)
-            li.recent-posts__item
-              article.small-post.small-post--medium
-                img(src= item.image width="401" height="229", alt= item.title).small-post__image
+          include _invitation.pug
+          each item in pugData.recent_posts.slice(1,4)
+            .recent-posts__item
+              article.small-post.small-post--decor
+                .small-post__image-wrapper
+                  img(src= item.image width="401" height="229", alt= item.title).small-post__image
                 .small-post__info
                   h4.small-post__title
                     a(href= item.link).small-post__link= item.title
@@ -78,9 +110,9 @@
                       p.small-post__reading-time= item.reading_time
                     p.small-post__post-text= item.post_text
       if indexPageVariant === 2
-        ul.recent-posts__list
+        .recent-posts__list
           each item in pugData.recent_posts.slice(2)
-            li.recent-posts__item
+            .recent-posts__item
               article.small-post.small-post--medium-no-image
                 .small-post__info
                   h4.small-post__title
@@ -95,28 +127,10 @@
                       p.small-post__reading-time= item.reading_time
                     p.small-post__post-text= item.post_text
       if indexPageVariant === 3
-        ul.recent-posts__list.recent-posts__list--narrow
+        .recent-posts__list.recent-posts__list--narrow
           each item in pugData.recent_posts.slice(0,-1)
-            li.recent-posts__item
+            .recent-posts__item
               article.small-post.small-post--narrow
-                img(src= item.image width="401" height="229", alt= item.title).small-post__image
-                .small-post__info
-                  h4.small-post__title
-                    a(href= item.link).small-post__link= item.title
-                  a(href= item.categorie_url).small-post__badge= item.categorie
-                  .small-post__description
-                    .small-post__meta
-                      a(href= item.author_link).small-post__writer-link
-                        img(src= item.author_image, width="18" height="18" alt="Author Post - " + item.author_name).small-post__photo-author
-                        p.small-post__author-name= item.author_name
-                      time(datetime= item.post_datetime).small-post__date= item.post_date
-                      p.small-post__reading-time= item.reading_time
-                    p.small-post__post-text= item.post_text
-      if indexPageVariant === 4
-        ul.recent-posts__list
-          each item in pugData.recent_posts.slice(0,4)
-            li.recent-posts__item
-              article.small-post.small-post--decor
                 img(src= item.image width="401" height="229", alt= item.title).small-post__image
                 .small-post__info
                   h4.small-post__title

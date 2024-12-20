@@ -57,11 +57,12 @@ section.top-posts
                       p.small-post__reading-time= item.reading_time
                     p.small-post__post-text= item.post_text
       else if indexPageVariant === 4
-        .top-of-the-month__slider.top-of-the-month__slider--column
-          div(data-simplebar data-simplebar-auto-hide="false" class="top-of-the-month__track")
+        .top-of-the-month__slider.top-of-the-month__slider--column.top-of-the-month__slider--decor
+          div(data-simplebar data-simplebar-auto-hide="false" class="top-of-the-month__track top-of-the-month__track--decor")
             each item in pugData.top_of_the_month
               article.top-of-the-month__post.small-post.small-post--decor
-                img(src= item.image width="401" height="229", alt= item.title).small-post__image
+                .small-post__image-wrapper
+                  img(src= item.image width="401" height="229", alt= item.title).small-post__image
                 .small-post__info
                   h4.small-post__title
                     a(href= item.link).small-post__link= item.title

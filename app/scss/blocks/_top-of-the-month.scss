@@ -7,8 +7,16 @@
   max-height: 464px;
 }
 
+.top-of-the-month__track--decor {
+  padding-right: 26px;
+}
+
 .top-of-the-month__slider--column .top-of-the-month__track {
   max-height: 670px;
+}
+
+.top-of-the-month__slider--column .top-of-the-month__track--decor {
+  max-height: 435px;
 }
 
 .top-of-the-month__track--column-no-image {
@@ -36,6 +44,10 @@
 
 .top-of-the-month__slider--column .top-of-the-month__post:not(:last-of-type) {
   margin-bottom: 32px;
+}
+
+.top-of-the-month__slider--decor .top-of-the-month__post:not(:last-of-type) {
+  margin-bottom: 66px;
 }
 
 .top-of-the-month__post.small-post--medium-no-image {
