@@ -829,6 +829,8 @@ body {
 }
 
 .section-title {
+  display: inline-flex;
+  align-items: center;
   margin: 0;
   font-weight: 600;
   font-size: 21px;
@@ -837,12 +839,32 @@ body {
   color: var(--color-min-shaft);
 }
 
+.section-title--big {
+  font-size: 27px;
+}
+
 .section-title__marker {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin-right: 5px;
   padding: 2px 1px;
   color: var(--color-white);
   background-color: var(--color-primary);
+}
+
+.section-title--big .section-title__marker {
+  margin-right: 10px;
+  padding: 0 6px;
+}
+
+.section-title__icon {
+  width: 24px;
+  height: 24px;
+  fill: currentcolor;
+}
+
+.section-title--big .section-title__icon {
+  margin-right: 10px;
 }
 
 .top-of-the-month__title {
@@ -1400,6 +1422,11 @@ body {
   background-color: transparent;
 }
 
+.button--xl {
+  padding: 15px 23px;
+  font-size: 15px;
+}
+
 .button__icon {
   width: 20px;
   height: 20px;
@@ -1910,6 +1937,65 @@ body {
   padding-right: 42px;
   padding-left: 42px;
   cursor: pointer;
+}
+
+.author-request {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  background-color: var(--color-aqua-haze);
+}
+
+.author-request__container {
+  text-align: center;
+}
+
+.author-request__title {
+  margin-bottom: 40px;
+}
+
+.author-request__wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 470px;
+}
+
+.author-request__subtitle {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: var(--color-min-shaft);
+}
+
+.author-request__description {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 15px;
+  line-height: 150%;
+  color: var(--color-emperor);
+}
+
+.author-request__description:last-of-type {
+  margin-bottom: 32px;
+}
+
+.author-request__subject {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: var(--color-min-shaft);
+}
+
+.author-request__email {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+  color: var(--color-min-shaft);
 }
 
 @media (hover: hover) {

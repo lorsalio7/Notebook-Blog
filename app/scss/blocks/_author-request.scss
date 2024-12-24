@@ -1,0 +1,58 @@
+.author-request {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  background-color: var(--color-aqua-haze);
+}
+
+.author-request__container {
+  text-align: center;
+}
+
+.author-request__title {
+  margin-bottom: 40px;
+}
+
+.author-request__wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 470px;
+}
+
+.author-request__subtitle {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: var(--color-min-shaft);
+}
+
+.author-request__description {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 15px;
+  line-height: 150%;
+  color: var(--color-emperor);
+}
+
+.author-request__description:last-of-type {
+  margin-bottom: 32px;
+}
+
+.author-request__subject {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: var(--color-min-shaft);
+}
+
+.author-request__email {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+  color: var(--color-min-shaft);
+}

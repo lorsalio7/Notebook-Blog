@@ -1,4 +1,6 @@
 .section-title {
+  display: inline-flex;
+  align-items: center;
   margin: 0;
   font-weight: 600;
   font-size: 21px;
@@ -7,10 +9,30 @@
   color: var(--color-min-shaft);
 }
 
+.section-title--big {
+  font-size: 27px;
+}
+
 .section-title__marker {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin-right: 5px;
   padding: 2px 1px;
   color: var(--color-white);
   background-color: var(--color-primary);
+}
+
+.section-title--big .section-title__marker {
+  margin-right: 10px;
+  padding: 0 6px;
+}
+
+.section-title__icon {
+  width: 24px;
+  height: 24px;
+  fill: currentcolor;
+}
+
+.section-title--big .section-title__icon {
+  margin-right: 10px;
 }
