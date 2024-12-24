@@ -3,7 +3,8 @@ main.main
   if topPostsArray.includes(indexPageVariant)
     h1.visually-hidden Notebook - Best Travel Blog In The World
     include _top-posts.pug
+    include _content.pug
   if pageName === "new-writer"
     h1.visually-hidden Become an article writer on Notebook - Best Travel Blog In The World
     include _author-request.pug
-  include _content.pug
+    include _reward.pug
