@@ -1,6 +1,4 @@
 .section-title {
-  display: inline-flex;
-  align-items: center;
   margin: 0;
   font-weight: 600;
   font-size: 21px;
@@ -14,8 +12,6 @@
 }
 
 .section-title__marker {
-  display: inline-flex;
-  align-items: center;
   margin-right: 5px;
   padding: 2px 1px;
   color: var(--color-white);
@@ -28,11 +24,12 @@
 }
 
 .section-title__icon {
-  width: 24px;
-  height: 24px;
+  width: 17px;
+  height: 17px;
   fill: currentcolor;
+  transform: translateY(-2px);
 }
 
 .section-title--big .section-title__icon {
-  margin-right: 10px;
+  margin-right: 16px;
 }

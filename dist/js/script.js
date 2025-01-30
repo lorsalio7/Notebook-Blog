@@ -1,18 +1,18 @@
 "use strict";
 
-let dropdownButtons = document.querySelectorAll(".dropdown__toggle");
+var dropdownButtons = document.querySelectorAll(".dropdown__toggle");
 if (dropdownButtons[0]) {
-  let dropdownContents = document.querySelectorAll(".dropdown__list");
-  dropdownButtons.forEach(dropdownButton => {
-    dropdownButton.addEventListener("click", e => {
-      const currentButton = e.target;
-      const currentDropdownContent = currentButton.nextElementSibling;
-      dropdownButtons.forEach(el => {
+  var dropdownContents = document.querySelectorAll(".dropdown__list");
+  dropdownButtons.forEach(function (dropdownButton) {
+    dropdownButton.addEventListener("click", function (e) {
+      var currentButton = e.target;
+      var currentDropdownContent = currentButton.nextElementSibling;
+      dropdownButtons.forEach(function (el) {
         if (el !== currentButton) {
           el.classList.remove("dropdown__toggle--active");
         }
       });
-      dropdownContents.forEach(el => {
+      dropdownContents.forEach(function (el) {
         if (el !== currentDropdownContent) {
           el.classList.remove("dropdown__list--active");
         }
@@ -25,7 +25,7 @@ if (dropdownButtons[0]) {
   });
   function closeAllDropdowns(e) {
     if (!e.target.closest(".site-navigation__list") || e.keyCode === 27) {
-      for (let i = 0; i < dropdownButtons.length; i++) {
+      for (var i = 0; i < dropdownButtons.length; i++) {
         dropdownButtons[i].classList.remove("dropdown__toggle--active");
         dropdownContents[i].classList.remove("dropdown__list--active");
       }
@@ -35,10 +35,10 @@ if (dropdownButtons[0]) {
   }
 }
 ;
-const themeButton = document.querySelector(".theme-button");
+var themeButton = document.querySelector(".theme-button");
 if (themeButton) {
-  const documentHtml = document.querySelector("html");
-  let isDarkTheme = localStorage.getItem("dark-theme");
+  var documentHtml = document.querySelector("html");
+  var isDarkTheme = localStorage.getItem("dark-theme");
   if (isDarkTheme === "true") {
     setDarkTheme();
   } else {
@@ -65,9 +65,18 @@ if (themeButton) {
   }
 }
 ;
-let popularPostsSlider = document.querySelector(".popular-posts-slider");
+var popularPostsSlider = document.querySelector(".popular-posts-slider");
 if (popularPostsSlider) {
   popularPostsSlider = new Splide(popularPostsSlider, {
+    arrows: false,
+    gap: 30,
+    focusableNodes: "a, button"
+  }).mount();
+}
+var aboutUsSlider = document.querySelector(".about-us__slider");
+if (aboutUsSlider) {
+  aboutUsSlider = new Splide(aboutUsSlider, {
+    perPage: 5,
     arrows: false,
     gap: 30,
     focusableNodes: "a, button"

@@ -10,8 +10,7 @@
   "author": "",
   "license": "ISC",
   "browserslist": [
-    "last 2 versions",
-    "not dead"
+    "> 0.4%"
   ],
   "devDependencies": {
     "@babel/core": "^7.16.0",

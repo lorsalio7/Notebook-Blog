@@ -688,8 +688,7 @@ body {
   display: block;
   width: 119px;
   height: 27px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   transition: fill 0.3s ease;
 }
 
@@ -741,9 +740,7 @@ body {
 }
 
 .language-form__select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border: none;
   padding: 2px 16px 2px 4px;
   width: 100%;
@@ -829,8 +826,6 @@ body {
 }
 
 .section-title {
-  display: inline-flex;
-  align-items: center;
   margin: 0;
   font-weight: 600;
   font-size: 21px;
@@ -844,8 +839,6 @@ body {
 }
 
 .section-title__marker {
-  display: inline-flex;
-  align-items: center;
   margin-right: 5px;
   padding: 2px 1px;
   color: var(--color-white);
@@ -858,13 +851,14 @@ body {
 }
 
 .section-title__icon {
-  width: 24px;
-  height: 24px;
+  width: 17px;
+  height: 17px;
   fill: currentcolor;
+  transform: translateY(-2px);
 }
 
 .section-title--big .section-title__icon {
-  margin-right: 10px;
+  margin-right: 16px;
 }
 
 .top-of-the-month__title {
@@ -1113,8 +1107,7 @@ body {
   border-radius: 7px;
   width: 100%;
   height: 229px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .small-post--medium .small-post__image {
@@ -1184,8 +1177,7 @@ body {
   border-radius: 50%;
   width: 18px;
   height: 18px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .small-post__author-name {
@@ -1392,7 +1384,7 @@ body {
   background-color: var(--color-primary);
   transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
   -webkit-user-select: none;
-     -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -1462,8 +1454,7 @@ body {
   border-radius: 50%;
   width: 80px;
   height: 80px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .small-author-card__name {
@@ -1706,8 +1697,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .tags__list {
@@ -1742,7 +1732,7 @@ body {
   line-height: 1;
   color: var(--color-dove-gray);
   -webkit-user-select: none;
-     -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -1799,7 +1789,7 @@ body {
   line-height: 1;
   color: var(--color-dove-gray);
   -webkit-user-select: none;
-     -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -1917,7 +1907,7 @@ body {
   background-color: var(--color-aqua-squeeze);
 }
 
-.subscription-form__input::-moz-placeholder {
+.subscription-form__input:-ms-input-placeholder {
   color: var(--color-boulder);
 }
 
@@ -2061,6 +2051,86 @@ body {
   background-size: 12px 12px;
   background-repeat: no-repeat;
   transition: transform 0.3s ease;
+}
+
+.about-us {
+  padding-top: 80px;
+  padding-bottom: 124px;
+  background-color: var(--color-aqua-haze);
+}
+
+.about-us__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 76px;
+  text-align: center;
+}
+
+.about-us__title {
+  margin-right: auto;
+  margin-bottom: 32px;
+  margin-left: auto;
+  max-width: 550px;
+  text-align: center;
+}
+
+.about-us__text {
+  margin-top: 0;
+  margin-bottom: 24px;
+  max-width: 665px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--color-emperor);
+}
+
+.about-us__subtitle {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: var(--color-min-shaft);
+}
+
+.about-us__slider {
+  padding-top: 14px;
+}
+
+.companies-slider__track {
+  margin-bottom: 40px;
+}
+
+.companies-slider__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.companies-slider__logo {
+  fill: var(--color-min-shaft);
+  transition: fill 0.3s ease;
+}
+
+.companies-slider .splide__pagination {
+  position: static;
+}
+
+.companies-slider .splide__pagination__page {
+  margin: 0 5px;
+  border-radius: 2px;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-tiara);
+  opacity: 1;
+}
+
+.companies-slider .splide__pagination__page.is-active {
+  background-color: var(--color-primary);
+  transform: scale(1);
 }
 
 @media (hover: hover) {

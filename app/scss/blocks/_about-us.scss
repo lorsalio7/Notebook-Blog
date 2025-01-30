@@ -1,0 +1,46 @@
+.about-us {
+  padding-top: 80px;
+  padding-bottom: 124px;
+  background-color: var(--color-aqua-haze);
+}
+
+.about-us__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 76px;
+  text-align: center;
+}
+
+.about-us__title {
+  margin-right: auto;
+  margin-bottom: 32px;
+  margin-left: auto;
+  max-width: 550px;
+  text-align: center;
+}
+
+.about-us__text {
+  margin-top: 0;
+  margin-bottom: 24px;
+  max-width: 665px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--color-emperor);
+}
+
+.about-us__subtitle {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: var(--color-min-shaft);
+}
+
+.about-us__slider {
+  padding-top: 14px;
+}

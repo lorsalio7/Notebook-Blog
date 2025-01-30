@@ -1,0 +1,32 @@
+.companies-slider__track {
+  margin-bottom: 40px;
+}
+
+.companies-slider__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.companies-slider__logo {
+  fill: var(--color-min-shaft);
+  transition: fill 0.3s ease;
+}
+
+.companies-slider .splide__pagination {
+  position: static;
+}
+
+.companies-slider .splide__pagination__page {
+  margin: 0 5px;
+  border-radius: 2px;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-tiara);
+  opacity: 1;
+}
+
+.companies-slider .splide__pagination__page.is-active {
+  background-color: var(--color-primary);
+  transform: scale(1);
+}
