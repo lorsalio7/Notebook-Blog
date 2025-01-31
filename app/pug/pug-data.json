@@ -476,5 +476,43 @@
       "author_name": "Jesica koli",
       "reading_time": "3 min. to read"
     }
+  ],
+  "authors": [
+    {
+      "image": "/img/maria-jenin-author.jpg",
+      "name": "Maria Jenin",
+      "post_count": "20",
+      "link": "#"
+    },
+    {
+      "image": "/img/asa-agarwal-author.jpg",
+      "name": "Asa Agarwal",
+      "post_count": "13",
+      "link": "#"
+    },
+    {
+      "image": "/img/enna-lee-author.jpg",
+      "name": "Enna Lee",
+      "post_count": "19",
+      "link": "#"
+    },
+    {
+      "image": "/img/simon-dsilva-author.jpg",
+      "name": "Simon D’silva",
+      "post_count": "7",
+      "link": "#"
+    },
+    {
+      "image": "/img/severina-zyma-author.jpg",
+      "name": "Severina Zyma",
+      "post_count": "11",
+      "link": "#"
+    },
+    {
+      "image": "/img/igraine-knef-author.jpg",
+      "name": "Igraine Knef",
+      "post_count": "23",
+      "link": "#"
+    }
   ]
 }

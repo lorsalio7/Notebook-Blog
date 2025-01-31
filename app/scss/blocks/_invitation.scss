@@ -14,6 +14,22 @@
   color: var(--color-min-shaft);
 }
 
+.authors__invitation .invitation__text {
+  margin-bottom: 17px;
+  font-size: 27px;
+}
+
+.invitation__description {
+  margin-top: 0;
+  margin-bottom: 34px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--color-emperor);
+}
+
 .invitation__button {
   display: inline-block;
 }

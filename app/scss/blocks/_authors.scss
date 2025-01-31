@@ -1,0 +1,31 @@
+.authors {
+  padding-top: 76px;
+  padding-bottom: 107px;
+}
+
+.authors__title {
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.authors__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  padding: 0;
+  max-width: 946px;
+}
+
+.authors__item {
+  flex-basis: calc(50% - 30px);
+  margin-bottom: 40px;
+}
+
+.authors__invitation {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1076px;
+}

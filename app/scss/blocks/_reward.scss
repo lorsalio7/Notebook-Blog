@@ -39,34 +39,5 @@
 }
 
 .reward__link {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 100%;
-  text-decoration: none;
   text-transform: capitalize;
-  color: var(--color-primary);
-
-  &::after {
-    content: "";
-    display: block;
-    margin-left: 8px;
-    width: 12px;
-    height: 12px;
-    background-image: url("../img/link-arrow.svg");
-    background-position: center;
-    background-size: 12px 12px;
-    background-repeat: no-repeat;
-    transition: transform 0.3s ease;
-  }
-
-  @include hover {
-    text-decoration: underline;
-
-    &::after {
-      transform: translateX(5px);
-    }
-  }
 }

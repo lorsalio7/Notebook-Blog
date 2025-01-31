@@ -1,0 +1,16 @@
+section.authors
+  .container
+    h2.authors__title.section-title.section-title--big
+      span.section-title__marker Meet
+      | Our authors
+    ul.authors__list
+      each item in pugData.authors
+        li.authors__item
+          article.author-card
+            .author-card__wrapper
+              img(src= item.image width="150" height="150", alt="Photo by the author " + item.name).author-card__photo
+            .author-card__info
+              h3.author-card__name= item.name
+              p.author-card__post-count= item.post_count + " Posts"
+              a(href= item.link).arrow-link.author-card__link See details about author
+    include _invitation.pug
