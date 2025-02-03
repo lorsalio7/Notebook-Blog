@@ -9,6 +9,10 @@
   margin-right: 18px;
 }
 
+.socials--authors .socials__item:not(:last-of-type) {
+  margin-right: 22px;
+}
+
 .socials--small .socials__item:not(:last-of-type) {
   margin-right: 10px;
 }
@@ -29,6 +33,19 @@
 
     > .socials__icon {
       fill: var(--color-white);
+    }
+  }
+}
+
+.socials--authors .socials__link {
+  border: none;
+
+  @include hover {
+    border: none;
+    background-color: unset;
+
+    > .socials__icon {
+      fill: var(--color-primary);
     }
   }
 }

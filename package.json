@@ -21,6 +21,7 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-avif": "^1.1.1",
     "gulp-babel": "^8.0.0",
+    "gulp-cached": "^1.1.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
     "gulp-file-include": "^2.3.0",

@@ -12,3 +12,7 @@ main.main
     h1.visually-hidden About Us
     include _about-us.pug
     include _authors.pug
+  if pageName === "about-author"
+    h1.visually-hidden Saimon D'silva - author on NoteBook
+    include _author-info.pug
+    include _author-posts.pug

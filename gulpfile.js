@@ -19,6 +19,7 @@ const gulpAvif = require("gulp-avif");
 const webp = require("gulp-webp");
 const notify = require("gulp-notify");
 const plumber = require("gulp-plumber");
+const cashe = require("gulp-cached");
 
 
 const plumberNotify = (title) => {
@@ -58,9 +59,11 @@ function gulpPug() {
       pugData: JSON.parse(fs.readFileSync("app/pug/pug-data.json", "utf-8"))
     }
   }))
+  .pipe(cashe("pug"))
   .pipe(dest("./dist/"))
   .pipe(browsersync.stream())
 }
+// .pipe(cashe("pug"))
 
 function cssLibs() {
   let filesCssLibs = fs.readdirSync("app/css_libs/");
