@@ -17,6 +17,10 @@
   margin-right: 10px;
 }
 
+.contacts__socials .socials__item:not(:last-of-type) {
+  margin-right: 20px;
+}
+
 .socials__link {
   display: flex;
   align-items: center;

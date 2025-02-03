@@ -1,0 +1,43 @@
+section.contacts
+  .container
+    h2.contacts__title.section-title.section-title--big
+      span.section-title__marker Contact
+      | Us
+    .contacts__wrapper
+      .contacts__column
+        form(action="#", method="post").contact-form
+          .contact-form__row
+            input(type="text" id="contact-name" placeholder="Name" name="user-name").contact-form__input.contact-form__input--half
+            label(for="contact-name").visually-hidden Enter your name
+            input(type="email" id="contact-email" placeholder="Email" name="user-email").contact-form__input.contact-form__input--half
+            label(for="contact-email").visually-hidden Enter your email
+          .contact-form__row
+            input(type="text", name="subject" id="email-subject" placeholder="Subject").contact-form__input
+            label(for="email-subject").visually-hidden Enter subject
+          textarea(name="message" id="message" placeholder="Type your message").contact-form__input.contact-form__textarea
+          label(for="message").visually-hidden Enter your message
+          button(type="submit").button.contact-form__button Send message
+      .contacts__column
+        p.contacts__text Dynamically underwhelm integrated outsourcing via timely models. Rapidiously reconceptualize visionary imperatives without
+        .contacts__link-container
+          a(href="mailto:blog.notebook@gmail.com").contacts__link blog.notebook@gmail.com
+          a(href="tel:+886554654654").contacts__link +886554 654654
+        address.contacts__address 9567 Turner Trace Apt. BC C3G8A4
+        p.contacts__subtitle Follow on:
+        ul.socials.contacts__socials
+          li.socials__item
+            a(href="#").socials__link
+              svg(width="12" height="10" class="socials__icon" aria-hidden="true")
+                use(xlink:href="img/sprite.svg#twitter-ic")
+          li.socials__item
+            a(href="#").socials__link
+              svg(width="7" height="14" class="socials__icon" aria-hidden="true")
+                use(xlink:href="img/sprite.svg#facebook-ic")
+          li.socials__item
+            a(href="#").socials__link
+              svg(width="14" height="14" class="socials__icon" aria-hidden="true")
+                use(xlink:href="img/sprite.svg#pinterest-ic")
+          li.socials__item
+            a(href="#").socials__link
+              svg(width="14" height="14" class="socials__icon" aria-hidden="true")
+                use(xlink:href="img/sprite.svg#instagram-ic")

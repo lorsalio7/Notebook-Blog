@@ -1,0 +1,116 @@
+.contacts {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.contacts__title {
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__column {
+  flex-basis: 636px;
+}
+
+.contacts__column:first-child {
+  flex-basis: calc(52.16% - 40px);
+}
+
+.contacts__column:last-child {
+  flex-basis: calc(47.84% - 40px);
+}
+
+.contact-form__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.contact-form__input {
+  border: none;
+  border-radius: 5px;
+  padding: 12px 15px;
+  width: 100%;
+  box-shadow: 0 0 0 1px var(--color-primary) inset;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  color: var(--color-dusty-gray);
+  transition: box-shadow 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border: 1px transparent;
+    box-shadow: 0 0 0 3px var(--color-primary) inset;
+  }
+}
+
+.contact-form__textarea {
+  margin-bottom: 18px;
+  min-height: 153px;
+  resize: vertical;
+}
+
+.contact-form__input--half {
+  flex-basis: calc(50% - 12px);
+}
+
+.contact-form__button {
+  border: 1px solid transparent;
+  padding: 14px 30px;
+}
+
+.contacts__text {
+  margin-top: 0;
+  margin-bottom: 40px;
+  max-width: 400px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  color: var(--color-emperor);
+}
+
+.contacts__link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contacts__link {
+  display: inline-block;
+  margin-bottom: 9px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  text-decoration: none;
+  color: var(--color-emperor);
+  transition: color 0.3s ease;
+
+  @include hover {
+    text-decoration: underline;
+    color: var(--color-primary);
+  }
+}
+
+.contacts__address {
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 150%;
+  color: var(--color-emperor);
+}
+
+.contacts__subtitle {
+  margin-top: 0;
+  margin-bottom: 17px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+  color: var(--color-min-shaft);
+}
