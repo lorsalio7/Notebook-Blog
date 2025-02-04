@@ -18,3 +18,6 @@ main.main
     include _author-posts.pug
   if pageName === "contact-page"
     include _contacts.pug
+  if pageName === "search-result"
+    h1.visually-hidden Site search
+    include _data-search.pug
