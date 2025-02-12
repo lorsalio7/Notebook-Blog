@@ -1,0 +1,62 @@
+.accordion .accordion__button {
+  border-radius: 8px;
+  padding: 18px 40px 18px 18px;
+  font-family: var(--sans-serif);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: var(--color-min-shaft);
+  background-color: var(--color-aqua-squeeze);
+
+  &:focus {
+    color: var(--color-min-shaft);
+  }
+}
+
+.accordion .accordion__button::before {
+  content: "";
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  border-radius: 2px;
+  width: 17px;
+  height: 2px;
+  background-color: var(--color-primary);
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.accordion .accordion__button::after {
+  content: "";
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  border-radius: 2px;
+  width: 17px;
+  height: 2px;
+  background-color: var(--color-primary);
+  transform: translateY(-50%) rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.accordion .is-active > .accordion__header .accordion__button::after {
+  content: "";
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.accordion .ac {
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-aqua-haze);
+}
+
+.accordion__text {
+  margin: 0;
+  padding: 18px 20px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  color: var(--color-dove-gray);
+}

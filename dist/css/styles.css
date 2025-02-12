@@ -1476,6 +1476,10 @@ body {
   margin-right: 8px;
 }
 
+.button__icon--right {
+  margin-left: 8px;
+}
+
 .top-authors__list {
   list-style-type: none;
   margin: 0;
@@ -2565,6 +2569,111 @@ body {
   margin-bottom: 24px;
   fill: var(--color-primary);
   transition: fill 0.3s ease;
+}
+
+.faq {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.faq__title {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.faq__text {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--color-dove-gray);
+}
+
+.faq__accordion {
+  margin-right: auto;
+  margin-bottom: 80px;
+  margin-left: auto;
+  max-width: 746px;
+}
+
+.faq__subtitle {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--color-dark-charcoal);
+}
+
+.faq__button {
+  text-align: center;
+}
+
+.accordion .accordion__button {
+  border-radius: 8px;
+  padding: 18px 40px 18px 18px;
+  font-family: var(--sans-serif);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: var(--color-min-shaft);
+  background-color: var(--color-aqua-squeeze);
+}
+
+.accordion .accordion__button:focus {
+  color: var(--color-min-shaft);
+}
+
+.accordion .accordion__button::before {
+  content: "";
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  border-radius: 2px;
+  width: 17px;
+  height: 2px;
+  background-color: var(--color-primary);
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.accordion .accordion__button::after {
+  content: "";
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  border-radius: 2px;
+  width: 17px;
+  height: 2px;
+  background-color: var(--color-primary);
+  transform: translateY(-50%) rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.accordion .is-active > .accordion__header .accordion__button::after {
+  content: "";
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.accordion .ac {
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-aqua-haze);
+}
+
+.accordion__text {
+  margin: 0;
+  padding: 18px 20px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  color: var(--color-dove-gray);
 }
 
 @media (hover: hover) {

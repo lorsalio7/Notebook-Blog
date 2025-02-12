@@ -83,3 +83,5 @@ if (aboutUsSlider) {
   }).mount();
 }
 ;
+new Accordion(".accordion").open(0);
+;

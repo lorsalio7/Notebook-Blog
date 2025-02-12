@@ -1,0 +1,20 @@
+extends ../layout/main-template.pug
+
+block vars
+  - var pageTitle = "FAQ | Notebook - Travel Blog";
+  - var pageDescription = "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur";
+  - var htmlClass = "page";
+  - var additionalClasses = " full-height";
+  - var bodyClass = "page__body";
+  - var pageName = "faq-page";
+
+prepend styles
+  link(rel="stylesheet", href="/libs/css/accordion.min.css")
+
+block content
+  include ../sections/_header.pug
+  include ../sections/_index-main.pug
+  include ../sections/_footer.pug
+
+prepend scripts
+  script(src="/libs/js/accordion.min.js" defer)
