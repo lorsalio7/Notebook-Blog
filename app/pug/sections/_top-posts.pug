@@ -79,18 +79,18 @@ section.top-posts
       h3.popular-posts__title.section-title
         span.section-title__marker Popular
         | Posted
-      - let validVariants = [3, 4]
+      - var validVariants = [3, 4]
 
         div(class= validVariants.includes(indexPageVariant) ? "popular-posts__slider popular-posts-slider popular-posts-slider--spacious splide" : "popular-posts__slider popular-posts-slider splide")
 
           .splide__track
             ul.splide__list
-              - let pageVariants = [1, 4]
+              - var pageVariants = [1, 4]
 
               if pageVariants.includes(indexPageVariant)
-                - let newArr = [];
-                - for (let i = 0; i < pugData.popular_posts.length; i += 2) {
-                -   let pair = pugData.popular_posts.slice(i, i + 2);
+                - var newArr = [];
+                - for (var i = 0; i < pugData.popular_posts.length; i += 2) {
+                -   var pair = pugData.popular_posts.slice(i, i + 2);
                 -   if (pair.length > 0) {
                 -     newArr.push(pair);
                 -   }
@@ -112,9 +112,9 @@ section.top-posts
                             p.small-post__reading-time= item.reading_time
                           p.small-post__post-text= item.post_text
               if indexPageVariant === 2
-                - let newArr = [];
-                - for (let i = 0; i < pugData.popular_posts.length; i += 2) {
-                -   let pair = pugData.popular_posts.slice(i, i + 2);
+                - var newArr = [];
+                - for (var i = 0; i < pugData.popular_posts.length; i += 2) {
+                -   var pair = pugData.popular_posts.slice(i, i + 2);
                 -   if (pair.length > 0) {
                 -     newArr.push(pair);
                 -   }
@@ -134,9 +134,9 @@ section.top-posts
                               p.small-post__author-name= item.author_name
                             p.small-post__reading-time= item.reading_time
               if indexPageVariant === 3
-                - let newArr = [];
-                - for (let i = 0; i < pugData.popular_posts_2.length; i += 4) {
-                -   let pair = pugData.popular_posts_2.slice(i, i + 4);
+                - var newArr = [];
+                - for (var i = 0; i < pugData.popular_posts_2.length; i += 4) {
+                -   var pair = pugData.popular_posts_2.slice(i, i + 4);
                 -   if (pair.length > 0) {
                 -     newArr.push(pair);
                 -   }

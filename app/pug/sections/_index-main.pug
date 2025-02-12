@@ -1,5 +1,5 @@
 main.main
-  - let topPostsArray = [1, 2, 3, 4]
+  - var topPostsArray = [1, 2, 3, 4]
   if topPostsArray.includes(indexPageVariant)
     h1.visually-hidden Notebook - Best Travel Blog In The World
     include _top-posts.pug
@@ -21,3 +21,5 @@ main.main
   if pageName === "search-result"
     h1.visually-hidden Site search
     include _data-search.pug
+  if pageName === "categories-page"
+    include _categories.pug
