@@ -29,3 +29,32 @@
     }
   }
 }
+
+.arrow-link--reverse {
+  &::before {
+    content: "";
+    display: block;
+    margin-right: 12px;
+    width: 23px;
+    height: 23px;
+    background-image: url("../img/link-arrow.svg");
+    background-position: center;
+    background-size: 23px 23px;
+    background-repeat: no-repeat;
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+  }
+
+  @include hover {
+    text-decoration: underline;
+
+    &::before {
+      transform: rotate(-180deg) translateX(5px);
+    }
+  }
+}

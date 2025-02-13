@@ -83,5 +83,8 @@ if (aboutUsSlider) {
   }).mount();
 }
 ;
-new Accordion(".accordion").open(0);
+var accordion = document.querySelector(".accordion");
+if (accordion) {
+  new Accordion(accordion).open(0);
+}
 ;

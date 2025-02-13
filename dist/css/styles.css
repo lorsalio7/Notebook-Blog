@@ -2270,6 +2270,25 @@ body {
   transition: transform 0.3s ease;
 }
 
+.arrow-link--reverse::before {
+  content: "";
+  display: block;
+  margin-right: 12px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/link-arrow.svg");
+  background-position: center;
+  background-size: 23px 23px;
+  background-repeat: no-repeat;
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease;
+}
+
+.arrow-link--reverse::after {
+  content: "";
+  display: none;
+}
+
 .author-info {
   padding-top: 80px;
   padding-bottom: 100px;
@@ -2676,6 +2695,43 @@ body {
   color: var(--color-dove-gray);
 }
 
+.not-found {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.not-found__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.not-found__code {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 200px;
+  line-height: 100%;
+  color: var(--color-primary);
+}
+
+.not-found__text {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: var(--color-dark-charcoal);
+}
+
+.not-found__link {
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 140%;
+  text-transform: capitalize;
+  color: var(--color-primary);
+}
+
 @media (hover: hover) {
   .site-navigation__link:hover {
     text-decoration: underline;
@@ -2794,6 +2850,14 @@ body {
 
   .arrow-link:hover::after {
     transform: translateX(5px);
+  }
+
+  .arrow-link--reverse:hover {
+    text-decoration: underline;
+  }
+
+  .arrow-link--reverse:hover::before {
+    transform: rotate(-180deg) translateX(5px);
   }
 
   .contacts__link:hover {
