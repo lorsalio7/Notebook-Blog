@@ -52,7 +52,7 @@ function browserSync() {
 
 function gulpPug() {
   return src("app/pug/pages/**/*.pug")
-  .pipe(plumber(plumberNotify('Pug')))
+  // .pipe(plumber(plumberNotify('Pug')))
   .pipe(pug({
     pretty: true,
     locals: {
@@ -89,7 +89,7 @@ function jsLibs() {
 
 function css() {
   return src("app/scss/styles.scss")
-  .pipe(plumber(plumberNotify('Styles')))
+  // .pipe(plumber(plumberNotify('Styles')))
   .pipe(
     scss({
       outputStyle: "expanded"
@@ -116,7 +116,7 @@ function css() {
 
 function js() {
   return src("app/js/script.js")
-  .pipe(plumber(plumberNotify('Scripts')))
+  // .pipe(plumber(plumberNotify('Scripts')))
   .pipe(fileinclude({
     prefix: "@@",
     basepath: "@file"
