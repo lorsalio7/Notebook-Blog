@@ -1,3 +1,5 @@
+@use "helpers/mixins";
+
 .arrow-link {
   position: relative;
   display: inline-flex;
@@ -21,7 +23,7 @@
     transition: transform 0.3s ease;
   }
 
-  @include hover {
+  @include mixins.hover {
     text-decoration: underline;
 
     &::after {
@@ -50,7 +52,7 @@
     display: none;
   }
 
-  @include hover {
+  @include mixins.hover {
     text-decoration: underline;
 
     &::before {

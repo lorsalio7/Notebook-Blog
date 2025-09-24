@@ -1,5 +1,5 @@
-@import "vendors/module";
-@import "helpers/module";
-@import "fonts";
-@import "base";
-@import "blocks/module";
+@use "vendors/vendors";
+@use "helpers/helpers";
+@use "fonts";
+@use "base";
+@use "blocks/blocks";

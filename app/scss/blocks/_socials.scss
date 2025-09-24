@@ -1,3 +1,5 @@
+@use "helpers/mixins";
+
 .socials {
   display: flex;
   list-style-type: none;
@@ -53,7 +55,7 @@
   height: 24px;
   transition: border 0.3s ease, background-color 0.3s ease;
 
-  @include hover {
+  @include mixins.hover {
     border: 1px solid var(--color-primary);
     background-color: var(--color-primary);
 
@@ -66,7 +68,7 @@
 .socials--authors .socials__link {
   border: none;
 
-  @include hover {
+  @include mixins.hover {
     border: none;
     background-color: unset;
 

@@ -1,3 +1,5 @@
+@use "helpers/mixins";
+
 .small-post {
   display: flex;
   flex-direction: column;
@@ -61,7 +63,7 @@
   color: var(--color-dove-gray);
   background-color: var(--color-aqua-squeeze);
 
-  @include hover {
+  @include mixins.hover {
     color: var(--color-white);
     background-color: var(--color-primary);
   }
@@ -125,7 +127,7 @@
   text-decoration: none;
   color: var(--color-min-shaft);
 
-  @include hover {
+  @include mixins.hover {
     text-decoration: underline;
   }
 }

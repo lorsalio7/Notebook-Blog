@@ -1,3 +1,5 @@
+@use "helpers/mixins";
+
 .user-navigation {
   display: flex;
   justify-content: flex-end;
@@ -8,6 +10,10 @@
 
 .user-navigation__item:not(:last-of-type) {
   margin-right: 40px;
+
+  @include mixins.max(mixins.$xl) {
+    margin-right: 24px;
+  }
 }
 
 .user-navigation__link {
@@ -16,7 +22,7 @@
   text-decoration: none;
   color: var(--color-dark-charcoal);
 
-  @include hover {
+  @include mixins.hover {
     text-decoration: underline;
 
     > .user-navigation__icon {

@@ -43,10 +43,51 @@
 
 /* @include hover-focus {} */
 
-/* @mixin px940 {
-  @media (max-width: 940px) {
+/*
+Шаблон переменных медиа запросов
+
+$xxs: 320px;
+$xs: 375px;
+$sm: 425px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
+$xxxl: 1920px; */
+
+$xxs: 320px;
+$xs: 375px;
+$sm: 425px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
+$xxxl: 1920px;
+
+@mixin max($bp) {
+  $value: $bp - 0.02px;
+
+  @media (max-width: $value) {
     @content;
   }
-} */
+}
 
-/* @include px940 {} */
+/* @include breakpoints.max(breakpoints.имя_переменной) {} */
+
+@mixin min($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+/* @include breakpoints.min(breakpoints.имя_переменной) {} */
+
+@mixin between($min, $max) {
+  $max-value: $max - 0.02px;
+
+  @media (min-width: $min) and (max-width: $max-value) {
+    @content;
+  }
+}
+
+/* @include breakpoints.between(breakpoints.имя_переменной, breakpoints.имя_переменной) {} */

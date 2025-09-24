@@ -61,7 +61,7 @@ if (themeButton) {
   function setLightTheme() {
     documentHtml.classList.remove("dark-theme");
     themeButton.classList.remove("theme-button--active");
-    localStorage.setItem("dark-theme", "false");
+    localStorage.removeItem("dark-theme", "false");
   }
 }
 ;

@@ -1,3 +1,5 @@
+@use "helpers/mixins";
+
 .instafeed__list {
   display: flex;
   flex-wrap: wrap;
@@ -48,7 +50,7 @@
     transition: opacity 0.3s ease;
   }
 
-  @include hover {
+  @include mixins.hover {
     &::before {
       opacity: 0.3;
     }

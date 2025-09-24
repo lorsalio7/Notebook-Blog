@@ -1,3 +1,5 @@
+@use "helpers/mixins";
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -14,7 +16,7 @@
   cursor: pointer;
   user-select: none;
 
-  @include hover {
+  @include mixins.hover {
     border: 1px solid var(--color-primary);
     color: var(--color-primary);
     background-color: var(--color-white);
@@ -27,7 +29,7 @@
   color: var(--color-primary);
   background-color: var(--color-white);
 
-  @include hover {
+  @include mixins.hover {
     border: 1px solid var(--color-white);
     color: var(--color-white);
     background-color: transparent;
@@ -44,7 +46,7 @@
   color: var(--color-primary);
   background-color: transparent;
 
-  @include hover {
+  @include mixins.hover {
     color: var(--color-white);
     background-color: var(--color-primary);
 
@@ -61,7 +63,7 @@
   color: var(--color-dove-gray);
   background-color: transparent;
 
-  @include hover {
+  @include mixins.hover {
     border: 1px solid var(--color-primary);
     color: var(--color-white);
     background-color: var(--color-primary);

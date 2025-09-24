@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -463,13 +465,23 @@ template {
 
 /* @include hover-focus {} */
 
-/* @mixin px940 {
-  @media (max-width: 940px) {
-    @content;
-  }
-} */
+/*
+Шаблон переменных медиа запросов
 
-/* @include px940 {} */
+$xxs: 320px;
+$xs: 375px;
+$sm: 425px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
+$xxxl: 1920px; */
+
+/* @include breakpoints.max(breakpoints.имя_переменной) {} */
+
+/* @include breakpoints.min(breakpoints.имя_переменной) {} */
+
+/* @include breakpoints.between(breakpoints.имя_переменной, breakpoints.имя_переменной) {} */
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
@@ -614,8 +626,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 -8px;
   padding: 0;
+}
+
+.site-navigation__item {
+  margin-bottom: 8px;
 }
 
 .site-navigation__item:not(:last-of-type) {
@@ -3061,6 +3077,7 @@ body {
 
 .meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -3077,10 +3094,6 @@ body {
   height: 12px;
   background-color: var(--color-dusty-gray);
   transform: translateY(-50%);
-}
-
-.meta__item--no-decor::after {
-  background-color: transparent;
 }
 
 .meta__writer-link {
@@ -3142,6 +3155,16 @@ body {
 
 .dark-theme .meta__reading-time {
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_601_15)'%3E%3Cpath d='M5.40002 3H6.60002V5.7516L8.22422 7.3758L7.37582 8.2242L5.40002 6.2484V3Z' fill='rgb(209, 209, 209)'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 6C0 2.6916 2.6916 0 6 0C9.3084 0 12 2.6916 12 6C12 9.3084 9.3084 12 6 12C2.6916 12 0 9.3084 0 6ZM1.2 6C1.2 8.6466 3.3534 10.8 6 10.8C8.6466 10.8 10.8 8.6466 10.8 6C10.8 3.3534 8.6466 1.2 6 1.2C3.3534 1.2 1.2 3.3534 1.2 6Z' fill='rgb(209, 209, 209)'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_601_15'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+@media (max-width: 1279.98px) {
+  .site-navigation__item:not(:last-of-type) {
+    margin-right: 24px;
+  }
+
+  .user-navigation__item:not(:last-of-type) {
+    margin-right: 24px;
+  }
 }
 
 @media (hover: hover) {

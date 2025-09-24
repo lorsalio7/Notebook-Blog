@@ -1,13 +1,23 @@
+@use "helpers/mixins";
+
 .site-navigation__list {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 -8px;
   padding: 0;
+}
+
+.site-navigation__item {
+  margin-bottom: 8px;
 }
 
 .site-navigation__item:not(:last-of-type) {
   margin-right: 40px;
+
+  @include mixins.max(mixins.$xl) {
+    margin-right: 24px;
+  }
 }
 
 .site-navigation__link {
@@ -16,7 +26,7 @@
   text-decoration: none;
   color: var(--color-dark-charcoal);
 
-  @include hover {
+  @include mixins.hover {
     text-decoration: underline;
   }
 }

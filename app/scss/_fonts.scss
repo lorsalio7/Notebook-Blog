@@ -1,7 +1,10 @@
+
 /* @include font("$name", "$font-family", $weight, $style, $font-name-local, $font-name-local-alternate); */
-@include font("Noto-Sans-Regular", "Noto Sans", 400, normal, "Noto Sans Regular", "Noto-Sans-Regular");
-@include font("Noto-Sans-Light", "Noto Sans", 200, normal, "Noto Sans Light", "Noto-Sans-Light");
-@include font("Noto-Sans-Italic", "Noto Sans", 400, italic, "Noto Sans Italic", "Noto-Sans-Italic");
-@include font("Noto-Sans-Bold", "Noto Sans", 700, normal, "Noto Sans Bold", "Noto-Sans-Bold");
-@include font("Noto-Sans-Medium", "Noto Sans", 500, normal, "Noto Sans Medium", "Noto-Sans-Medium");
-@include font("Noto-Sans-SemiBold", "Noto Sans", 600, normal, "Noto Sans SemiBold", "Noto-Sans-SemiBold");
+@use "helpers/mixins" as font;
+
+@include font.font("Noto-Sans-Regular", "Noto Sans", 400, normal, "Noto Sans Regular", "Noto-Sans-Regular");
+@include font.font("Noto-Sans-Light", "Noto Sans", 200, normal, "Noto Sans Light", "Noto-Sans-Light");
+@include font.font("Noto-Sans-Italic", "Noto Sans", 400, italic, "Noto Sans Italic", "Noto-Sans-Italic");
+@include font.font("Noto-Sans-Bold", "Noto Sans", 700, normal, "Noto Sans Bold", "Noto-Sans-Bold");
+@include font.font("Noto-Sans-Medium", "Noto Sans", 500, normal, "Noto Sans Medium", "Noto-Sans-Medium");
+@include font.font("Noto-Sans-SemiBold", "Noto Sans", 600, normal, "Noto Sans SemiBold", "Noto-Sans-SemiBold");

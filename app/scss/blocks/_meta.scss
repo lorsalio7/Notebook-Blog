@@ -1,5 +1,6 @@
 .meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -15,12 +16,6 @@
     height: 12px;
     background-color: var(--color-dusty-gray);
     transform: translateY(-50%);
-  }
-}
-
-.meta__item--no-decor {
-  &::after {
-    background-color: transparent;
   }
 }
 
