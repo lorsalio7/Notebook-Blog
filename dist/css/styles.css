@@ -3115,9 +3115,13 @@ body {
 }
 
 .meta__name {
+  overflow: hidden;
   margin: 0;
+  max-width: 59px;
   font-size: 12px;
   line-height: 130%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   text-transform: capitalize;
   color: var(--color-boulder);
 }
@@ -3306,5 +3310,9 @@ body {
 
   .categories__link:hover > .categories__caption {
     color: var(--color-white);
+  }
+
+  .meta__writer-link:hover .meta__name {
+    text-decoration: underline;
   }
 }

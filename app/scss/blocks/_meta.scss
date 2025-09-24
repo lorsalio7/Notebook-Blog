@@ -1,3 +1,5 @@
+@use "helpers/mixins";
+
 .meta {
   display: flex;
   flex-wrap: wrap;
@@ -26,6 +28,12 @@
   align-self: start;
   margin-right: 10px;
   text-decoration: none;
+
+  @include mixins.hover {
+    .meta__name {
+      text-decoration: underline;
+    }
+  }
 }
 
 .meta__photo {
@@ -38,9 +46,13 @@
 }
 
 .meta__name {
+  overflow: hidden;
   margin: 0;
+  max-width: 59px;
   font-size: 12px;
   line-height: 130%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   text-transform: capitalize;
   color: var(--color-boulder);
 }
