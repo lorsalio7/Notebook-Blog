@@ -1,7 +1,17 @@
+@use "helpers/mixins";
+
 .container {
   --container-width: 1326px;
 
   margin: 0 auto;
   padding: 0 15px;
   max-width: var(--container-width);
+
+  @include mixins.max(mixins.$md) {
+    padding: 0 44px;
+  }
+
+  @include mixins.max(mixins.$sm) {
+    padding: 0 15px;
+  }
 }

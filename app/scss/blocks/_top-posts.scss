@@ -1,3 +1,5 @@
+@use "helpers/mixins";
+
 .top-posts {
   padding-top: 80px;
   padding-bottom: 90px;
@@ -7,12 +9,36 @@
 .top-posts__container {
   display: flex;
   justify-content: space-between;
+
+  @include mixins.max(mixins.$md) {
+    flex-direction: column;
+  }
 }
 
 .top-posts__section:first-of-type {
   flex-basis: calc(70.22% - 25px);
+
+  @include mixins.max(mixins.$lg) {
+    flex-basis: 55%;
+  }
+
+  @include mixins.max(mixins.$md) {
+    margin-bottom: 40px;
+  }
 }
 
 .top-posts__section:last-of-type {
   max-width: calc(29.78% - 25px);
+
+  @include mixins.max(mixins.$xl) {
+    max-width: 29.78%;
+  }
+
+  @include mixins.max(mixins.$lg) {
+    max-width: calc(45% - 20px);
+  }
+
+  @include mixins.max(mixins.$md) {
+    max-width: 100%;
+  }
 }

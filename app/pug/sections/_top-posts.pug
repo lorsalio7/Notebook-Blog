@@ -9,7 +9,7 @@ section.top-posts
         .top-of-the-month__slider
           div(data-simplebar data-simplebar-auto-hide="false" class="top-of-the-month__track")
             each item in pugData.top_of_the_month
-              article.top-of-the-month__post.small-post
+              article.top-of-the-month__post.small-post.small-post--primary
                 h4.small-post__title
                   a(href= item.link).small-post__link= item.title
                 a(href= item.categorie_url).small-post__badge= item.categorie
