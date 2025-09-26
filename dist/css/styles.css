@@ -715,14 +715,19 @@ body {
 
 .user-navigation {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.user-navigation__item:not(:last-of-type) {
+.user-navigation__item {
   margin-right: 40px;
+}
+
+.user-navigation__item:last-child {
+  margin-right: 0;
 }
 
 .user-navigation__link {
@@ -825,6 +830,77 @@ body {
   height: 20px;
   background-color: var(--color-primary);
   transition: transform 0.3s ease-in-out;
+}
+
+.burger-button {
+  position: relative;
+  display: none;
+  border: 1px solid transparent;
+  padding: 0;
+  width: 34px;
+  height: 34px;
+  box-sizing: border-box;
+  background-color: transparent;
+  transition: border 0.3s ease;
+  cursor: pointer;
+}
+
+.burger-button__line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--color-min-shaft);
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease;
+  pointer-events: none;
+}
+
+.burger-button__line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -7px;
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--color-min-shaft);
+  transition: top 0.3s 0.3s ease, transform 0.3s ease;
+}
+
+.burger-button__line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--color-min-shaft);
+  transition: top 0.3s 0.3s ease, transform 0.3s ease;
+}
+
+.burger-button--close {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  z-index: 100;
+}
+
+.burger-button--close .burger-button__line {
+  background-color: transparent;
+}
+
+.burger-button--close .burger-button__line::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.burger-button--close .burger-button__line::after {
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 .top-posts {
@@ -3167,7 +3243,7 @@ body {
     margin-right: 24px;
   }
 
-  .user-navigation__item:not(:last-of-type) {
+  .user-navigation__item {
     margin-right: 24px;
   }
 
@@ -3193,6 +3269,14 @@ body {
 }
 
 @media (max-width: 1023.98px) {
+  .site-header__main-navigation {
+    flex-basis: 40%;
+  }
+
+  .site-header__user-navigation {
+    flex-basis: 40%;
+  }
+
   .top-posts__section:first-of-type {
     flex-basis: 55%;
   }
@@ -3213,6 +3297,74 @@ body {
 @media (max-width: 767.98px) {
   .container {
     padding: 0 44px;
+  }
+
+  .site-header__main-navigation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 77px 15px 24px 44px;
+    width: 60%;
+    background-color: var(--color-aqua-spring);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .site-header__main-navigation--active {
+    transform: translateX(0);
+  }
+
+  .site-header__burger-button {
+    flex-basis: 40%;
+  }
+
+  .site-navigation__list {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  .site-navigation__item:not(:last-of-type) {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .site-navigation__link {
+    font-size: 20px;
+  }
+
+  .dropdown__toggle {
+    display: block;
+  }
+
+  .dropdown__list {
+    position: static;
+    padding: 0 0 8px 16px;
+    box-shadow: none;
+    background-color: initial;
+  }
+
+  .dropdown__link {
+    font-size: 20px;
+  }
+
+  .user-navigation__contact {
+    align-self: flex-start;
+    font-size: 20px;
+  }
+
+  .user-navigation__theme-button {
+    margin-top: 24px;
+  }
+
+  .burger-button {
+    display: block;
   }
 
   .top-posts__container {
@@ -3239,6 +3391,20 @@ body {
 @media (max-width: 575.98px) {
   .container {
     padding: 0 15px;
+  }
+
+  .site-header__main-navigation {
+    padding-left: 20px;
+    width: 75%;
+  }
+
+  .user-navigation__language-form {
+    align-self: flex-start;
+    margin-top: 24px;
+  }
+
+  .language-form__select {
+    font-size: 20px;
   }
 
   .top-of-the-month__track {

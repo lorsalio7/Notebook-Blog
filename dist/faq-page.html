@@ -15,7 +15,11 @@
     <div class="wrapper">
       <header class="site-header">
         <div class="container site-header__container">
+          <div class="site-header__burger-button">
+            <button class="burger-button burger-button--open" type="button" aria-label="Открыть меню"><span class="burger-button__line"></span></button>
+          </div>
           <nav class="site-navigation site-header__main-navigation">
+            <button class="burger-button burger-button--close" type="button" aria-label="Закрыть меню"><span class="burger-button__line"></span></button>
             <ul class="site-navigation__list">
               <li class="site-navigation__item dropdown">
                 <button class="site-navigation__link dropdown__toggle" type="button">Homepages</button>
@@ -56,40 +60,33 @@
             <svg class="logo__image" width="120" height="28" aria-hidden="false">
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg></a>
-          <ul class="user-navigation site-header__user-navigation">
-            <li class="user-navigation__item"><a class="user-navigation__link" href="#">
-                <svg class="user-navigation__icon" width="15" height="15" aria-hidden="false">
-                  <use xlink:href="/img/sprite.svg#search-ic"></use>
-                </svg></a></li>
-            <li class="user-navigation__item"><a class="user-navigation__link" href="#">
-                <svg class="user-navigation__icon" width="14" height="14" aria-hidden="false">
-                  <use xlink:href="/img/sprite.svg#write-ic"></use>
-                </svg></a></li>
-            <li class="user-navigation__item"><a class="user-navigation__link" href="#">Contact</a></li>
-            <li class="user-navigation__item">
-              <form class="language-form" action="#">
-                <div class="language-form__wrapper">
-                  <label class="visually-hidden" for="language">Select language</label>
-                  <select class="language-form__select" name="language" id="language">
-                    <option value="en">En</option>
-                    <option value="es">Es</option>
-                    <option value="de">De</option>
-                    <option value="it">It</option>
-                  </select>
-                </div>
-              </form>
-            </li>
-            <li class="user-navigation__item">
-              <button class="theme-button" type="button" aria-label="Change Color Theme">
-                <svg class="theme-button__icon theme-button__icon--day" width="14" height="14" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#day-ic"></use>
-                </svg>
-                <svg class="theme-button__icon theme-button__icon--night" width="14" height="14" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#night-ic"></use>
-                </svg><span class="theme-button__slider"></span>
-              </button>
-            </li>
-          </ul>
+          <div class="user-navigation site-header__user-navigation"><a class="user-navigation__item user-navigation__link" href="#">
+              <svg class="user-navigation__icon" width="15" height="15" aria-hidden="false">
+                <use xlink:href="/img/sprite.svg#search-ic"></use>
+              </svg></a><a class="user-navigation__item user-navigation__link" href="#">
+              <svg class="user-navigation__icon" width="14" height="14" aria-hidden="false">
+                <use xlink:href="/img/sprite.svg#write-ic"></use>
+              </svg></a><a class="user-navigation__item user-navigation__link user-navigation__contact" href="#" data-da=".site-navigation,767.98">Contact</a>
+            <form class="user-navigation__item language-form user-navigation__language-form" action="#" data-da=".site-navigation,575.98">
+              <div class="language-form__wrapper">
+                <label class="visually-hidden" for="language">Select language</label>
+                <select class="language-form__select" name="language" id="language">
+                  <option value="en">En</option>
+                  <option value="es">Es</option>
+                  <option value="de">De</option>
+                  <option value="it">It</option>
+                </select>
+              </div>
+            </form>
+            <button class="user-navigation__item theme-button user-navigation__theme-button" type="button" data-da=".site-navigation,767.98" aria-label="Change Color Theme">
+              <svg class="theme-button__icon theme-button__icon--day" width="14" height="14" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#day-ic"></use>
+              </svg>
+              <svg class="theme-button__icon theme-button__icon--night" width="14" height="14" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#night-ic"></use>
+              </svg><span class="theme-button__slider"></span>
+            </button>
+          </div>
         </div>
       </header>
       <main class="main">

@@ -1,6 +1,11 @@
 header.site-header
   .container.site-header__container
+    .site-header__burger-button
+      button(type="button" aria-label="Открыть меню").burger-button.burger-button--open
+        span.burger-button__line
     nav.site-navigation.site-header__main-navigation
+      button(type="button" aria-label="Закрыть меню").burger-button.burger-button--close
+        span.burger-button__line
       ul.site-navigation__list
         li.site-navigation__item.dropdown
           button(type="button").site-navigation__link.dropdown__toggle Homepages
@@ -52,30 +57,25 @@ header.site-header
     a(href="#").logo.site-header__logo
       svg(width="120" height="28" class="logo__image" aria-hidden="false")
         use(xlink:href="img/sprite.svg#logo")
-    ul.user-navigation.site-header__user-navigation
-      li.user-navigation__item
-        a(href="#").user-navigation__link
-          svg(width="15" height="15" class="user-navigation__icon" aria-hidden="false")
-            use(xlink:href="/img/sprite.svg#search-ic")
-      li.user-navigation__item
-        a(href="#").user-navigation__link
-          svg(width="14" height="14" class="user-navigation__icon" aria-hidden="false")
-            use(xlink:href="/img/sprite.svg#write-ic")
-      li.user-navigation__item
-        a(href="#").user-navigation__link Contact
-      li.user-navigation__item
-        form(action="#").language-form
-          .language-form__wrapper
-            label(for="language").visually-hidden Select language
-            select(name="language" id="language").language-form__select
-              option(value="en") En
-              option(value="es") Es
-              option(value="de") De
-              option(value="it") It
-      li.user-navigation__item
-        button(type="button" aria-label="Change Color Theme").theme-button
-          svg(width="14" height="14" class="theme-button__icon theme-button__icon--day" aria-hidden="true")
-            use(xlink:href="img/sprite.svg#day-ic")
-          svg(width="14" height="14" class="theme-button__icon theme-button__icon--night" aria-hidden="true")
-            use(xlink:href="img/sprite.svg#night-ic")
-          span.theme-button__slider
+    .user-navigation.site-header__user-navigation
+      a(href="#").user-navigation__item.user-navigation__link
+        svg(width="15" height="15" class="user-navigation__icon" aria-hidden="false")
+          use(xlink:href="/img/sprite.svg#search-ic")
+      a(href="#").user-navigation__item.user-navigation__link
+        svg(width="14" height="14" class="user-navigation__icon" aria-hidden="false")
+          use(xlink:href="/img/sprite.svg#write-ic")
+      a(href="#" data-da=".site-navigation,767.98").user-navigation__item.user-navigation__link.user-navigation__contact Contact
+      form(action="#" data-da=".site-navigation,575.98").user-navigation__item.language-form.user-navigation__language-form
+        .language-form__wrapper
+          label(for="language").visually-hidden Select language
+          select(name="language" id="language").language-form__select
+            option(value="en") En
+            option(value="es") Es
+            option(value="de") De
+            option(value="it") It
+      button(type="button" data-da=".site-navigation,767.98" aria-label="Change Color Theme").user-navigation__item.theme-button.user-navigation__theme-button
+        svg(width="14" height="14" class="theme-button__icon theme-button__icon--day" aria-hidden="true")
+          use(xlink:href="img/sprite.svg#day-ic")
+        svg(width="14" height="14" class="theme-button__icon theme-button__icon--night" aria-hidden="true")
+          use(xlink:href="img/sprite.svg#night-ic")
+        span.theme-button__slider

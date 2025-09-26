@@ -1,0 +1,80 @@
+@use "helpers/mixins";
+
+.burger-button {
+  position: relative;
+  display: none;
+  border: 1px solid transparent;
+  padding: 0;
+  width: 34px;
+  height: 34px;
+  box-sizing: border-box;
+  background-color: transparent;
+  transition: border 0.3s ease;
+  cursor: pointer;
+
+  @include mixins.max(mixins.$md) {
+    display: block;
+  }
+}
+
+.burger-button__line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--color-min-shaft);
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease;
+  pointer-events: none;
+}
+
+.burger-button__line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -7px;
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--color-min-shaft);
+  transition:
+    top 0.3s 0.3s ease,
+    transform 0.3s ease;
+}
+
+.burger-button__line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--color-min-shaft);
+  transition:
+    top 0.3s 0.3s ease,
+    transform 0.3s ease;
+}
+
+.burger-button--close {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  z-index: 100;
+}
+
+.burger-button--close .burger-button__line {
+  background-color: transparent;
+}
+
+.burger-button--close .burger-button__line::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.burger-button--close .burger-button__line::after {
+  top: 0;
+  transform: rotate(-45deg);
+}

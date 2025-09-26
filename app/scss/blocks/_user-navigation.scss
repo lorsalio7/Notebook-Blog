@@ -2,18 +2,23 @@
 
 .user-navigation {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.user-navigation__item:not(:last-of-type) {
+.user-navigation__item {
   margin-right: 40px;
 
   @include mixins.max(mixins.$xl) {
     margin-right: 24px;
   }
+}
+
+.user-navigation__item:last-child {
+  margin-right: 0;
 }
 
 .user-navigation__link {
@@ -33,4 +38,24 @@
 
 .user-navigation__icon {
   fill: currentcolor;
+}
+
+.user-navigation__contact {
+  @include mixins.max(mixins.$md) {
+    align-self: flex-start;
+    font-size: 20px;
+  }
+}
+
+.user-navigation__theme-button {
+  @include mixins.max(mixins.$md) {
+    margin-top: 24px;
+  }
+}
+
+.user-navigation__language-form {
+  @include mixins.max(mixins.$sm) {
+    align-self: flex-start;
+    margin-top: 24px;
+  }
 }
