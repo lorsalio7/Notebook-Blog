@@ -1,4 +1,5 @@
 @@include("parts/functions/da.js");
+@@include("parts/functions/changeView.js");
 @@include("parts/header-dropdown.js");
 @@include("parts/burger-menu.js");
 @@include("parts/theme-toggle.js");

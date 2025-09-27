@@ -6,6 +6,10 @@
   color: #fff;
   background-color: var(--color-aqua-spring);
   transition: background-color 0.3s ease;
+
+  @include mixins.max(mixins.$md) {
+    padding: 22px 0;
+  }
 }
 
 .site-header__container {
@@ -63,7 +67,10 @@
 }
 
 .site-header__burger-button {
+  display: none;
+
   @include mixins.max(mixins.$md) {
+    display: block;
     flex-basis: 40%;
   }
 }
